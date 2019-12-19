@@ -1,0 +1,17 @@
+{
+	"sideNavigation": [{
+		"title": "Home",
+		"icon": "sap-icon://home",
+		"expanded": false,
+		"key": "DashBoard"
+	}, {
+		"title": "Job Master",
+		"expanded": false
+	}, {
+		"title": "Wage Master",
+		"expanded": false
+	}, {
+		"title": "Employee Groups",
+		"expanded": false
+	}]
+}
