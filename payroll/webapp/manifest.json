@@ -34,7 +34,9 @@
 
 	"sap.ui5": {
 		"flexEnabled": false,
-		"config": {"sapFiori2Adaptation": true},
+		"config": {
+			"sapFiori2Adaptation": true
+		},
 		"rootView": {
 			"viewName": "com.app.payroll.view.App",
 			"type": "XML",
@@ -81,10 +83,13 @@
 				"target": "Dashboard"
 			}],
 			"targets": {
+				"splitMasterAndDetail": {
+					"viewName": "view.SplitContainer"
+				},
 				"Dashboard": {
 					"viewId": "Dashboard",
 					"viewName": "Dashboard",
-					"viewLevel" : 1
+					"viewLevel": 1
 				}
 			}
 		}

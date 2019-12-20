@@ -1,0 +1,64 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:semantic="sap.m.semantic"
+	xmlns:c="sap.suite.ui.microchart" xmlns:l="sap.ui.layout" displayBlock="true" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" controllerName="com.app.payroll.controller.SplitContainer">
+	<Page showHeader="false">
+		<content>
+			<tnt:ToolPage id="toolPage" sideExpanded="false">
+				<tnt:header>
+					<tnt:ToolHeader>
+						<Button icon="sap-icon://menu2" tooltip="Menu" type="Transparent" press="handleMenuPress">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow"/>
+							</layoutData>
+						</Button>
+						<ToolbarSpacer/>
+						<Text text="HOME"/>
+						<ToolbarSpacer/>
+						<Button id="userQuickView" type="Emphasized" tooltip="User Quick View" icon="sap-icon://customer" press="onPressUserQuickView">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow"/>
+								<FlexItemData growFactor="1"/>
+							</layoutData>
+						</Button>
+						<Button id="logoutBtn" type="Reject" tooltip="Logout" icon="sap-icon://log" press="onPressLogout">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow"/>
+							</layoutData>
+						</Button>
+					</tnt:ToolHeader>
+				</tnt:header>
+				<tnt:sideContent>
+					<tnt:SideNavigation expanded="false" itemSelect="onItemSelect">
+						<tnt:NavigationList items="{path: '/sideNavigation', templateShareable:false}">
+							<tnt:NavigationListItem text="{path:'title', templateShareable:false}" icon="{path:'icon', templateShareable:false}"
+								expanded="{path:'expanded', templateShareable:false}" items="{path:'items', templateShareable:false}"
+								key="{path:'key', templateShareable:false}">
+								<tnt:NavigationListItem text="{path:'title', templateShareable:false}" icon="{path:'icon', templateShareable:false}"
+									key="{path:'key', templateShareable:false}"></tnt:NavigationListItem>
+							</tnt:NavigationListItem>
+						</tnt:NavigationList>
+						<tnt:fixedItem>
+							<tnt:NavigationList items="{path: '/fixedNavigation'}">
+								<tnt:NavigationListItem text="{title}" icon="{icon}" select="handleRespPopoverSettingsPress"/>
+							</tnt:NavigationList>
+						</tnt:fixedItem>
+					</tnt:SideNavigation>
+				</tnt:sideContent>
+				<tnt:mainContents>
+					<NavContainer id="NavContainer">
+						<SplitContainer id="SplitCont" mode="ShowHideMode">
+							<detailPages></detailPages>
+							<masterPages></masterPages>
+						</SplitContainer>
+					</NavContainer>
+				</tnt:mainContents>
+			</tnt:ToolPage>
+		</content>
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Text text="Powered By Inflexion"/>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

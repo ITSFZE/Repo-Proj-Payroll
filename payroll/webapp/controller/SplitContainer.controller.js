@@ -12,7 +12,7 @@ sap.ui.define([
 	"sap/m/MessagePopover"
 ], function (Controller, JSONModel, Fragment, MessageToast, Button, Dialog, ButtonType, Text, MessageItem, Link, MessagePopover) {
 	"use strict";
-	return Controller.extend("com.app.payroll.controller.Dashboard", {
+	return Controller.extend("com.app.payroll.controller.SplitContainer", {
 		onInit: function () {
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 			var oUserModel = new JSONModel(sap.ui.require.toUrl("com/app/payroll/model/UserData.json"));
@@ -106,7 +106,7 @@ sap.ui.define([
 				Fragment.load({
 					name: "com.app.payroll.view.fragment.SettingsResponsivePopOver",
 					controller: this
-				}).then(function(oPopover){
+				}).then(function (oPopover) {
 					this._oPopover = oPopover;
 					this.getView().addDependent(this._oPopover);
 					this._oPopover.openBy(oButton);
@@ -118,19 +118,15 @@ sap.ui.define([
 		handleCloseButton: function (oEvent) {
 			this._oPopover.close();
 		},
-		onItemSelect: function(oEvent) {
+		onItemSelect: function (oEvent) {
 			var that = this;
 			var viewId = this.getView().getId();
 			var toolPage = sap.ui.getCore().byId(viewId + "--toolPage");
 			toolPage.setSideExpanded(false);
 			var item = oEvent.getParameter("item");
 			switch (item.getKey()) {
-				
+
 			}
-		},
-		onTilePress: function(oEvt) {
-			var that = this;
-			var getPages = oEvt.getSource().data("route");
 		}
 	});
 });
