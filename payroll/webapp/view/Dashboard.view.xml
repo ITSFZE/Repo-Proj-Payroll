@@ -12,14 +12,15 @@
 							</layoutData>
 						</Button>
 						<ToolbarSpacer/>
-						<Text text="Dashboard"/>
+						<Text text="HOME"/>
 						<ToolbarSpacer/>
-						<Button id="userPopOver" tooltip="User Profile" icon="sap-icon://customer" type="Transparent" press="onPressUserProflie">
+						<Button id="userQuickView" type="Emphasized" tooltip="User Quick View" icon="sap-icon://customer" press="onPressUserQuickView">
 							<layoutData>
 								<OverflowToolbarLayoutData priority="NeverOverflow"/>
+								<FlexItemData growFactor="1" />
 							</layoutData>
 						</Button>
-						<Button id="logoutBtn" tooltip="Logout" icon="sap-icon://log" type="Transparent" press="handleLogoutPress">
+						<Button id="logoutBtn" type="Reject" tooltip="Logout" icon="sap-icon://log" press="onPressLogout">
 							<layoutData>
 								<OverflowToolbarLayoutData priority="NeverOverflow"/>
 							</layoutData>
@@ -32,9 +33,14 @@
 							<tnt:NavigationListItem text="{path:'title', templateShareable:false}" icon="{path:'icon', templateShareable:false}"
 								expanded="{path:'expanded', templateShareable:false}" items="{path:'items', templateShareable:false}"
 								key="{path:'key', templateShareable:false}">
-								<tnt:NavigationListItem text="{path:'title', templateShareable:false}" key="{path:'key', templateShareable:false}"></tnt:NavigationListItem>
+								<tnt:NavigationListItem text="{path:'title', templateShareable:false}" icon="{path:'icon', templateShareable:false}" key="{path:'key', templateShareable:false}"></tnt:NavigationListItem>
 							</tnt:NavigationListItem>
 						</tnt:NavigationList>
+						<tnt:fixedItem>
+							<tnt:NavigationList items="{path: '/fixedNavigation'}">
+								<tnt:NavigationListItem text="{title}" icon="{icon}" select="handleRespPopoverSettingsPress"/>
+							</tnt:NavigationList>
+						</tnt:fixedItem>
 					</tnt:SideNavigation>
 				</tnt:sideContent>
 				<tnt:mainContents>
@@ -43,13 +49,13 @@
 							<content>
 								<l:BlockLayout id="dashBLayout">
 									<l:BlockLayoutRow>
-										<l:BlockLayoutCell>
+										<l:BlockLayoutCell title="Masters">
 											<GenericTile id="genericTileJobMaster" class="sapUiTinyMarginBegin sapUiTinyMarginTop" sizeBehavior="Small" header="Job Master" app:route=""
 												press="onTilePress">
 												<tileContent>
 													<TileContent>
 														<content>
-															<ImageContent src=""/>
+															<ImageContent src="sap-icon://work-history"/>
 														</content>
 													</TileContent>
 												</tileContent>
@@ -59,7 +65,7 @@
 												<tileContent>
 													<TileContent>
 														<content>
-															<ImageContent src=""/>
+															<ImageContent src="sap-icon://money-bills"/>
 														</content>
 													</TileContent>
 												</tileContent>
@@ -69,7 +75,7 @@
 												<tileContent>
 													<TileContent>
 														<content>
-															<ImageContent src=""/>
+															<ImageContent src="sap-icon://group"/>
 														</content>
 													</TileContent>
 												</tileContent>
@@ -83,5 +89,11 @@
 				</tnt:mainContents>
 			</tnt:ToolPage>
 		</content>
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Text text="Powered By Inflexion"/>
+			</OverflowToolbar>
+		</footer>
 	</Page>
 </mvc:View>

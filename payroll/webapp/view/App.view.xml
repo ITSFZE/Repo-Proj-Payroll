@@ -1,5 +1,5 @@
 <mvc:View controllerName="com.app.payroll.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-	<Shell id="shell">
+	<Shell id="shell" appWidthLimited="false">
 		<App id="idAppControl" />
 	</Shell>
 </mvc:View>

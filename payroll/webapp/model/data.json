@@ -5,13 +5,26 @@
 		"expanded": false,
 		"key": "DashBoard"
 	}, {
-		"title": "Job Master",
-		"expanded": false
-	}, {
-		"title": "Wage Master",
-		"expanded": false
-	}, {
-		"title": "Employee Groups",
+		"title": "Masters",
+		"icon": "sap-icon://database",
+		"expanded": false,
+		"items": [{
+			"title": "Job Master",
+			"icon": "sap-icon://work-history",
+			"expanded": false
+		}, {
+			"title": "Wage Master",
+			"icon": "sap-icon://money-bills",
+			"expanded": false
+		}, {
+			"title": "Employee Groups",
+			"icon": "sap-icon://group",
+			"expanded": false
+		}]
+	}],
+	"fixedNavigation": [{
+		"title": "Settings",
+		"icon": "sap-icon://action-settings",
 		"expanded": false
 	}]
 }
