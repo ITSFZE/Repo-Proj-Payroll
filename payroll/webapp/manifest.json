@@ -79,12 +79,53 @@
 				"name": "Dashboard",
 				"pattern": "",
 				"target": "Dashboard"
+			},
+			{
+				"name": "JobMaster",
+				"pattern": "RouteJobMaster",
+				"target": ["JobMaster"]
+			}, {
+				"name": "EditJobMaster",
+				"pattern": "EditJobMaster",
+				"target": ["EditJobMaster"]
+			}, {
+				"name": "CreateJob",
+				"pattern": "CreateJob",
+				"target": ["CreateJob"]
+			}, {
+				"name": "Login",
+				"pattern": "Login",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["Login"]
 			}],
+
 			"targets": {
 				"Dashboard": {
 					"viewId": "Dashboard",
 					"viewName": "Dashboard",
 					"viewLevel" : 1
+				},
+				"Login": {
+					"viewType": "XML",
+					"viewName": "Login",
+					"viewId": "app"
+				},
+				"JobMaster": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "JobMaster"
+				},
+				"EditJobMaster": {
+					"viewType": "XML",
+					"viewName": "EditJobMaster",
+					"viewLevel": 2
+				},
+				"CreateJob": {
+					"viewType": "XML",
+					"viewName": "CreateJob",
+					"viewLevel": 3
 				}
 			}
 		}
