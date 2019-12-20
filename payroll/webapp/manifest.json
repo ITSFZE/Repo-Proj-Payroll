@@ -78,18 +78,57 @@
 				"clearControlAggregation": false
 			},
 			"routes": [{
+				"name": "Login",
+				"pattern": "Login",
+				"target": ["Login"]
+			},
+			{
 				"name": "Dashboard",
-				"pattern": "",
+				"pattern": "Dashboard",
 				"target": "Dashboard"
+			},
+			{
+				"name": "JobMaster",
+				"pattern": "JobMaster",
+				"target": ["JobMaster"]
+			}, {
+				"name": "EditJobMaster",
+				"pattern": "EditJobMaster",
+				"target": ["EditJobMaster"]
+			}, {
+				"name": "CreateJob",
+				"pattern": "CreateJob",
+				"target": ["CreateJob"]
 			}],
+
 			"targets": {
 				"splitMasterAndDetail": {
 					"viewName": "view.SplitContainer"
 				},
+				"Login": {
+					"viewType": "XML",
+					"viewName": "Login",
+					"viewLevel" : 1
+				},
 				"Dashboard": {
 					"viewId": "Dashboard",
 					"viewName": "Dashboard",
-					"viewLevel": 1
+					"viewLevel" : 2
+				},
+				"JobMaster": {
+					"viewType": "XML",
+					"viewName": "JobMaster",
+					"viewLevel" : 3
+				},
+				"EditJobMaster": {
+					"viewType": "XML",
+					"viewName": "EditJobMaster",
+					"viewLevel" : 4
+				},
+				"CreateJob": {
+					"viewType": "XML",
+					"viewName": "CreateJob",
+					"viewLevel" : 5
 				}
 			}
 		}

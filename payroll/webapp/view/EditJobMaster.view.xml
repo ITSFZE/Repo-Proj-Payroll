@@ -1,0 +1,92 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns="sap.m"
+	controllerName="com.Payroll.controller.EditJobMaster" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Edit Job Master" showNavButton="true" navButtonPress="onPressNaveBack" titleAlignment="Center">
+		<content>
+			<f:SimpleForm class="sapUiLargeMarginBegin" editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3"
+				labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+				singleContainerFullSize="false">
+				<Label text="Job Name" required="true"/>
+				<Input/>
+			</f:SimpleForm>
+			<IconTabBar>
+				<items>
+					<IconTabFilter text="Roles/Responsiblities">
+						<Table alternateRowColors="true">
+							<headerToolbar>
+								<Toolbar>
+									<content>
+										<Label text="Roles/Responsiblities" design="Bold" required="true"/>
+										<ToolbarSpacer/>
+										<Button icon="sap-icon://add" iconFirst="true" type="Ghost"/>
+									</content>
+								</Toolbar>
+							</headerToolbar>
+							<columns>
+								<Column width="3%" demandPopin="true"></Column>
+								<Column width="90%" demandPopin="true"></Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<CheckBox/>
+										<Input/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</IconTabFilter>
+					<IconTabFilter text="Salary Structure">
+						<Table items="{JobMaster>/JobMaster}" popinLayout="GridSmall" alternateRowColors="true">
+							<headerToolbar>
+								<Toolbar>
+									<content>
+										<Label text="Salary Structure" design="Bold"/>
+										<ToolbarSpacer/>
+										<Button icon="sap-icon://add" iconFirst="true" type="Ghost"/>
+									</content>
+								</Toolbar>
+							</headerToolbar>
+							<columns>
+								<Column width="3%" demandPopin="true">
+									<CheckBox></CheckBox>
+								</Column>
+								<Column width="20%" hAlign="Center" demandPopin="true">
+									<Text text="Wage Type"/>
+								</Column>
+								<Column width="20%" hAlign="Center" demandPopin="true">
+									<Text text="Amount Type"/>
+								</Column>
+								<Column width="15%" hAlign="Center" demandPopin="true">
+									<Text text="Percentage(%)"/>
+								</Column>
+								<Column width="15%" hAlign="Center" demandPopin="true">
+									<Text text="Base Wage Type"/>
+								</Column>
+								<Column width="15%" hAlign="Center" demandPopin="true">
+									<Text text="Amount"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<CheckBox></CheckBox>
+										<Select width="100%"/>
+										<Select width="100%"/>
+										<Text/>
+										<Select width="100%"/>
+										<Text/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+			<FlexBox justifyContent="Center" alignItems="Center" class="sapUiMediumMarginTop">
+				<items>
+					<Button text="Submit" type="Ghost" press="onPress" width="100%" icon="sap-icon://save" iconFirst="true"/>
+				</items>
+			</FlexBox>
+		</content>
+	</Page>
+</mvc:View>
