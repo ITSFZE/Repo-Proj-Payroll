@@ -1,1 +1,19 @@
-/* Enter your custom styles here */
+.custom-border {
+    border: solid;
+}
+
+.common {
+    color: black !important;
+}
+
+.common1 {
+    font-style: bold;
+    font-size: 15px;
+    text-align:center;
+}
+
+.custom-page {
+    background-image: url("../images/payroll-custom.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
