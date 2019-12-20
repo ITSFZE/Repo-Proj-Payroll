@@ -99,6 +99,18 @@
 				"name": "CreateJob",
 				"pattern": "CreateJob",
 				"target": ["CreateJob"]
+			},{
+				"name": "EmployeeGroup",
+				"pattern": "EmployeeGroup",
+				"target": ["EmployeeGroup"]
+			}, {
+				"name": "UpdateEmployeeGroup",
+				"pattern": "UpdateEmployeeGroup",
+				"target": ["UpdateEmployeeGroup"]
+			},{
+				"name": "CreateEmployeeGroup",
+				"pattern": "CreateEmployeeGroup",
+				"target": ["CreateEmployeeGroup"]
 			}],
 
 			"targets": {
@@ -129,6 +141,21 @@
 					"viewType": "XML",
 					"viewName": "CreateJob",
 					"viewLevel" : 5
+				},
+				"EmployeeGroup": {
+					"viewType": "XML",
+					"viewName": "EmployeeGroup",
+					"viewLevel":6
+				},
+				"UpdateEmployeeGroup": {
+					"viewType": "XML",
+					"viewName": "UpdateEmployeeGroup",
+					"viewLevel":7
+				},
+				"CreateEmployeeGroup": {
+					"viewType": "XML",
+					"viewName": "CreateEmployeeGroup",
+					"viewLevel": 8
 				}
 			}
 		}
