@@ -1,9 +1,9 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+	"com/app/payroll/controller/BaseController"
+], function (BaseController) {
 	"use strict";
 
-	return Controller.extend("com.app.payroll.controller.UpdateEmployeeGroup", {
+	return BaseController.extend("com.app.payroll.controller.UpdateEmployeeGroup", {
 		onInit: function () {
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 		},

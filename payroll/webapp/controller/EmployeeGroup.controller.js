@@ -1,11 +1,11 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller",
+	"com/app/payroll/controller/BaseController",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator"
-], function (Controller, Filter, FilterOperator) {
+], function (BaseController, Filter, FilterOperator) {
 	"use strict";
 
-	return Controller.extend("com.app.payroll.controller.EmployeeGroup", {
+	return BaseController.extend("com.app.payroll.controller.EmployeeGroup", {
 		onInit: function () {
 
 		},
