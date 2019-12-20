@@ -3,7 +3,7 @@ sap.ui.define([
 ], function (Controller) {
 	"use strict";
 
-	return Controller.extend("com.Payroll.controller.JobMaster", {
+	return Controller.extend("com.app.payroll.controller.JobMaster", {
 		onInit: function () {
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 		},
