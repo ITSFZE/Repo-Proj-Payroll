@@ -1,5 +1,5 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller",
+	"com/app/payroll/controller/BaseController",
 	"sap/ui/model/json/JSONModel",
 	"sap/ui/core/Fragment",
 	"sap/m/MessageToast",
@@ -9,10 +9,11 @@ sap.ui.define([
 	"sap/m/Text",
 	"sap/m/MessageItem",
 	"sap/m/Link",
-	"sap/m/MessagePopover"
-], function (Controller, JSONModel, Fragment, MessageToast, Button, Dialog, ButtonType, Text, MessageItem, Link, MessagePopover) {
+	"sap/m/MessagePopover",
+	"com/app/payroll/controller/BaseController"
+], function (BaseController, JSONModel, Fragment, MessageToast, Button, Dialog, ButtonType, Text, MessageItem, Link, MessagePopover) {
 	"use strict";
-	return Controller.extend("com.app.payroll.controller.Dashboard", {
+	return BaseController.extend("com.app.payroll.controller.Dashboard", {
 		onInit: function () {
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 			var oUserModel = new JSONModel(sap.ui.require.toUrl("com/app/payroll/model/UserData.json"));
