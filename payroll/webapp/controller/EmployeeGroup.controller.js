@@ -5,7 +5,7 @@ sap.ui.define([
 ], function (Controller, Filter, FilterOperator) {
 	"use strict";
 
-	return Controller.extend("com.EmployeeGroup.controller.EmployeeGroup", {
+	return Controller.extend("com.app.payroll.controller.EmployeeGroup", {
 		onInit: function () {
 
 		},
