@@ -1,4 +1,4 @@
-<mvc:View controllerName="com.EmployeeGroup.controller.UpdateEmployeeGroup" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+<mvc:View controllerName="com.app.payroll.controller.UpdateEmployeeGroup" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
 	displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
 	<Page title="Update Employee Group Type" showNavButton="true" navButtonPress="onPressNavBack" >
 		<content>
