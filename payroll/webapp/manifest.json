@@ -14,7 +14,6 @@
 			"version": "1.40.12"
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -31,7 +30,6 @@
 			"phone": true
 		}
 	},
-
 	"sap.ui5": {
 		"flexEnabled": false,
 		"config": {
@@ -63,9 +61,11 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -77,88 +77,123 @@
 				"controlId": "idAppControl",
 				"clearControlAggregation": false
 			},
-			"routes": [{
-				"name": "Login",
-				"pattern": "Login",
-				"target": ["Login"]
-			},
-			{
-				"name": "Dashboard",
-				"pattern": "Dashboard",
-				"target": "Dashboard"
-			},
-			{
-				"name": "JobMaster",
-				"pattern": "JobMaster",
-				"target": ["JobMaster"]
-			}, {
-				"name": "EditJobMaster",
-				"pattern": "EditJobMaster",
-				"target": ["EditJobMaster"]
-			}, {
-				"name": "CreateJob",
-				"pattern": "CreateJob",
-				"target": ["CreateJob"]
-			},{
-				"name": "EmployeeGroup",
-				"pattern": "EmployeeGroup",
-				"target": ["EmployeeGroup"]
-			}, {
-				"name": "UpdateEmployeeGroup",
-				"pattern": "UpdateEmployeeGroup",
-				"target": ["UpdateEmployeeGroup"]
-			},{
-				"name": "CreateEmployeeGroup",
-				"pattern": "CreateEmployeeGroup",
-				"target": ["CreateEmployeeGroup"]
-			},{
-				"name": "splitMasterAndDetail",
-				"pattern": "",
-				"target": ["WageMaster", "WageMasterDetail"]
-			}, {
-				"name": "DetailOne",
-				"pattern": "WageMasterDetail/{id}",
-				"target": ["WageMaster", "WageMasterDetail"]
-			}],
-
+			"routes": [
+				{
+					"name": "Login",
+					"pattern": "Login",
+					"target": [
+						"Login"
+					]
+				},
+				{
+					"name": "Dashboard",
+					"pattern": "Dashboard",
+					"target": [
+						"Dashboard"
+					]
+				},
+				{
+					"name": "JobMaster",
+					"pattern": "JobMaster",
+					"target": [
+						"JobMaster"
+					]
+				},
+				{
+					"name": "EditJobMaster",
+					"pattern": "EditJobMaster",
+					"target": [
+						"EditJobMaster"
+					]
+				},
+				{
+					"name": "CreateJob",
+					"pattern": "CreateJob",
+					"target": [
+						"CreateJob"
+					]
+				},
+				{
+					"name": "EmployeeGroup",
+					"pattern": "EmployeeGroup",
+					"target": [
+						"EmployeeGroup"
+					]
+				},
+				{
+					"name": "UpdateEmployeeGroup",
+					"pattern": "UpdateEmployeeGroup",
+					"target": [
+						"UpdateEmployeeGroup"
+					]
+				},
+				{
+					"name": "CreateEmployeeGroup",
+					"pattern": "CreateEmployeeGroup",
+					"target": [
+						"CreateEmployeeGroup"
+					]
+				},
+				{
+					"name": "WageMaster",
+					"pattern": "WageMaster",
+					"target": [
+						"WageMasterDetail",
+						"WageMaster"
+					]
+				},
+				{
+					"name": "WageMasterDetail",
+					"pattern": "WageMasterDetail",
+					"target": "WageMasterDetail"
+				},
+				{
+					"name": "EditWageMasterDetail",
+					"pattern": "EditWageMasterDetail/{id}",
+					"target": [
+						"WageMasterDetail",
+						"WageMaster"
+					]
+				}
+			],
 			"targets": {
-				"splitMasterAndDetail": {
-					"viewName": "view.SplitContainer"
+				"SplitContainerMasterAndDetail": {
+					"viewName": "view.SplitContainerMasterAndDetail"
 				},
 				"Login": {
 					"viewType": "XML",
 					"viewName": "Login",
-					"viewLevel" : 1
+					"viewLevel": 1
 				},
 				"Dashboard": {
 					"viewId": "Dashboard",
 					"viewName": "Dashboard",
-					"viewLevel" : 2
+					"viewLevel": 2
 				},
 				"JobMaster": {
 					"viewType": "XML",
 					"viewName": "JobMaster",
-					"viewLevel" : 3
+					"viewLevel": 3
 				},
 				"EditJobMaster": {
 					"viewType": "XML",
 					"viewName": "EditJobMaster",
-					"viewLevel" : 4
+					"viewLevel": 4
 				},
 				"CreateJob": {
 					"viewType": "XML",
 					"viewName": "CreateJob",
-					"viewLevel" : 5
+					"viewLevel": 5
 				},
 				"EmployeeGroup": {
 					"viewType": "XML",
 					"viewName": "EmployeeGroup",
-					"viewLevel":6
+					"viewLevel": 6
 				},
 				"UpdateEmployeeGroup": {
 					"viewType": "XML",
 					"viewName": "UpdateEmployeeGroup",
-					"viewLevel":7
+					"viewLevel": 7
 				},
 				"CreateEmployeeGroup": {
 					"viewType": "XML",
@@ -166,16 +201,25 @@
 					"viewLevel": 8
 				},
 				"WageMaster": {
-					"viewType": "XML",
 					"viewName": "WageMaster",
+					"parent": "SplitContainer",
+					"controlId": "SplitContainer",
 					"controlAggregation": "masterPages",
-					"controlId": "SplitCont"
+					"viewLevel": 9
 				},
 				"WageMasterDetail": {
-					"viewType": "XML",
 					"viewName": "WageMasterDetail",
+					"parent": "SplitContainerMasterAndDetail",
+					"controlId": "SplitContainer",
 					"controlAggregation": "detailPages",
-					"controlId": "SplitCont"
+					"viewLevel": 10
+				},
+				"EditWageMasterDetail": {
+					"viewName": "WageMasterDetail",
+					"parent": "SplitContainerMasterAndDetail",
+					"controlId": "SplitContainer",
+					"controlAggregation": "detailPages",
+					"viewLevel": 11
 				}
 			}
 		}
