@@ -5,6 +5,8 @@ sap.ui.define([
 
 	return BaseController.extend("com.app.payroll.controller.JobMaster", {
 		onInit: function () {
+			var oRouter = this.getRouter();
+			oRouter.getRoute("JobMaster").attachMatched(this._onRouteMatched, this);
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 		},
 		onPressCreateJob:function(){
