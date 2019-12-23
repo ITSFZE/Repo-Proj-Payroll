@@ -10,7 +10,8 @@ sap.ui.define([
 	return BaseController.extend("com.app.payroll.controller.WageMaster", {
 
 		onInit: function () {
-			this.oRouter = this.getOwnerComponent().getRouter();
+			var oRouter = this.getRouter();
+			oRouter.getRoute("WageMaster").attachMatched(this._onRouteMatched, this);
 
 		},
 		onListItemPress: function (oEvent) {
