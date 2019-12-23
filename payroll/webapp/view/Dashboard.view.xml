@@ -17,7 +17,7 @@
 						<Button id="userQuickView" type="Emphasized" tooltip="User Quick View" icon="sap-icon://customer" press="onPressUserQuickView">
 							<layoutData>
 								<OverflowToolbarLayoutData priority="NeverOverflow"/>
-								<FlexItemData growFactor="1" />
+								<FlexItemData growFactor="1"/>
 							</layoutData>
 						</Button>
 						<Button id="logoutBtn" type="Reject" tooltip="Logout" icon="sap-icon://log" press="onPressLogout">
@@ -33,7 +33,8 @@
 							<tnt:NavigationListItem text="{path:'title', templateShareable:false}" icon="{path:'icon', templateShareable:false}"
 								expanded="{path:'expanded', templateShareable:false}" items="{path:'items', templateShareable:false}"
 								key="{path:'key', templateShareable:false}">
-								<tnt:NavigationListItem text="{path:'title', templateShareable:false}" icon="{path:'icon', templateShareable:false}" key="{path:'key', templateShareable:false}"></tnt:NavigationListItem>
+								<tnt:NavigationListItem text="{path:'title', templateShareable:false}" icon="{path:'icon', templateShareable:false}"
+									key="{path:'key', templateShareable:false}"></tnt:NavigationListItem>
 							</tnt:NavigationListItem>
 						</tnt:NavigationList>
 						<tnt:fixedItem>

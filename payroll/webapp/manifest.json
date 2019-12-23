@@ -61,11 +61,9 @@
 			}
 		},
 		"resources": {
-			"css": [
-				{
-					"uri": "css/style.css"
-				}
-			]
+			"css": [{
+				"uri": "css/style.css"
+			}]
 		},
 		"routing": {
 			"config": {
@@ -77,85 +75,51 @@
 				"controlId": "idAppControl",
 				"clearControlAggregation": false
 			},
-			"routes": [
-				{
-					"name": "Login",
-					"pattern": "Login",
-					"target": [
-						"Login"
-					]
-				},
-				{
-					"name": "Dashboard",
-					"pattern": "Dashboard",
-					"target": [
-						"Dashboard"
-					]
-				},
-				{
-					"name": "JobMaster",
-					"pattern": "JobMaster",
-					"target": [
-						"JobMaster"
-					]
-				},
-				{
-					"name": "EditJobMaster",
-					"pattern": "EditJobMaster",
-					"target": [
-						"EditJobMaster"
-					]
-				},
-				{
-					"name": "CreateJob",
-					"pattern": "CreateJob",
-					"target": [
-						"CreateJob"
-					]
-				},
-				{
-					"name": "EmployeeGroup",
-					"pattern": "EmployeeGroup",
-					"target": [
-						"EmployeeGroup"
-					]
-				},
-				{
-					"name": "UpdateEmployeeGroup",
-					"pattern": "UpdateEmployeeGroup",
-					"target": [
-						"UpdateEmployeeGroup"
-					]
-				},
-				{
-					"name": "CreateEmployeeGroup",
-					"pattern": "CreateEmployeeGroup",
-					"target": [
-						"CreateEmployeeGroup"
-					]
-				},
-				{
-					"name": "WageMaster",
-					"pattern": "WageMaster",
-					"target": [
-						"WageMasterDetail",
-						"WageMaster"
-					]
-				},
-				{
-					"name": "WageMasterDetail",
-					"pattern": "WageMasterDetail",
-					"target": "WageMasterDetail"
-				},
-				{
-					"name": "EditWageMasterDetail",
-					"pattern": "EditWageMasterDetail/{id}",
-					"target": [
-						"WageMasterDetail",
-						"WageMaster"
-					]
-				}
-			],
+			"routes": [{
+				"name": "Login",
+				"pattern": "",
+				"target": ["Login"]
+			}, {
+				"name": "Dashboard",
+				"pattern": "Dashboard",
+				"target": ["Dashboard"]
+			}, {
+				"name": "JobMaster",
+				"pattern": "JobMaster",
+				"target": ["JobMaster"]
+			}, {
+				"name": "EditJobMaster",
+				"pattern": "EditJobMaster",
+				"target": ["EditJobMaster"]
+			}, {
+				"name": "CreateJob",
+				"pattern": "CreateJob",
+				"target": ["CreateJob"]
+			}, {
+				"name": "EmployeeGroup",
+				"pattern": "EmployeeGroup",
+				"target": ["EmployeeGroup"]
+			}, {
+				"name": "UpdateEmployeeGroup",
+				"pattern": "UpdateEmployeeGroup",
+				"target": ["UpdateEmployeeGroup"]
+			}, {
+				"name": "CreateEmployeeGroup",
+				"pattern": "CreateEmployeeGroup",
+				"target": ["CreateEmployeeGroup"]
+			}, {
+				"name": "WageMaster",
+				"pattern": "WageMaster",
+				"target": ["WageMasterDetail", "WageMaster"]
+			}, {
+				"name": "WageMasterDetail",
+				"pattern": "WageMasterDetail",
+				"target": "WageMasterDetail"
+			}, {
+				"name": "EditWageMasterDetail",
+				"pattern": "EditWageMasterDetail/{id}",
+				"target": ["WageMasterDetail", "WageMaster"]
+			}],
 			"targets": {
 				"SplitContainerMasterAndDetail": {
 					"viewName": "view.SplitContainerMasterAndDetail"
@@ -202,7 +166,7 @@
 				},
 				"WageMaster": {
 					"viewName": "WageMaster",
-					"parent": "SplitContainer",
+					"parent": "SplitContainerMasterAndDetail",
 					"controlId": "SplitContainer",
 					"controlAggregation": "masterPages",
 					"viewLevel": 9

@@ -6,9 +6,10 @@ sap.ui.define(["com/app/payroll/controller/BaseController"], function (BaseContr
 		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 		 * @memberOf com.Payroll.view.Login
 		 */
-		onInit: function () {},
+		onInit: function () {
+		},
 		onPressLogin: function () {
-			this.getOwnerComponent().getRouter().navTo("JobMaster");
+			this.getRouter().navTo("Dashboard");
 		}
 
 	});

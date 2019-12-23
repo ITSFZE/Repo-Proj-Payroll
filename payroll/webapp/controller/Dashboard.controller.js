@@ -15,6 +15,8 @@ sap.ui.define([
 	"use strict";
 	return BaseController.extend("com.app.payroll.controller.Dashboard", {
 		onInit: function () {
+			var oRouter = this.getRouter();
+			oRouter.getRoute("Dashboard").attachMatched(this._onRouteMatched, this);
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 			var oUserModel = new JSONModel(sap.ui.require.toUrl("com/app/payroll/model/UserData.json"));
 			this.getView().setModel(oUserModel, "UserModel");
@@ -107,7 +109,7 @@ sap.ui.define([
 				Fragment.load({
 					name: "com.app.payroll.view.fragment.SettingsResponsivePopOver",
 					controller: this
-				}).then(function(oPopover){
+				}).then(function (oPopover) {
 					this._oPopover = oPopover;
 					this.getView().addDependent(this._oPopover);
 					this._oPopover.openBy(oButton);
@@ -119,17 +121,17 @@ sap.ui.define([
 		handleCloseButton: function (oEvent) {
 			this._oPopover.close();
 		},
-		onItemSelect: function(oEvent) {
+		onItemSelect: function (oEvent) {
 			var that = this;
 			var viewId = this.getView().getId();
 			var toolPage = sap.ui.getCore().byId(viewId + "--toolPage");
 			toolPage.setSideExpanded(false);
 			var item = oEvent.getParameter("item");
 			switch (item.getKey()) {
-				
+
 			}
 		},
-		onTilePress: function(oEvt) {
+		onTilePress: function (oEvt) {
 			var that = this;
 			var getPages = oEvt.getSource().data("route");
 		}
