@@ -133,7 +133,7 @@ sap.ui.define([
 		},
 		onTilePress: function (oEvt) {
 			var that = this;
-			var getPages = oEvt.getSource().data("routes");
+			var getPages = oEvt.getSource().data("route");
 				switch (getPages) {
 					case 'JobMaster':
 							that.getRouter().navTo(getPages);
