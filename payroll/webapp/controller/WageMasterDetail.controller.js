@@ -8,9 +8,9 @@ sap.ui.define([
 
 		onInit: function () {
 			var that = this;
-			var oRouter = sap.ui.core.UIComponent.getRouterFor(that);
-			oRouter.getRoute("WageMasterDetail").attachPatternMatched(that._onObjectMatched, that);
-			oRouter.getRoute("DetailOne").attachPatternMatched(that._onObjectEditMatched, that);
+			var oRouter = this.getRouter();
+			oRouter.getRoute("WageMasterDetail").attachMatched(this._onRouteMatched, this);
+			oRouter.getRoute("DetailOne").attachMatched(that._onObjectEditMatched, that);
 
 		},
 		_onObjectMatched: function () {
