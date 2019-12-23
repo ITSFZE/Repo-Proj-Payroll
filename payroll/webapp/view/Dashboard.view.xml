@@ -51,7 +51,7 @@
 								<l:BlockLayout id="dashBLayout">
 									<l:BlockLayoutRow>
 										<l:BlockLayoutCell title="Masters">
-											<GenericTile id="genericTileJobMaster" class="sapUiTinyMarginBegin sapUiTinyMarginTop" sizeBehavior="Small" header="Job Master" app:route=""
+											<GenericTile id="genericTileJobMaster" class="sapUiTinyMarginBegin sapUiTinyMarginTop" sizeBehavior="Small" header="Job Master" app:route="JobMaster"
 												press="onTilePress">
 												<tileContent>
 													<TileContent>
@@ -62,7 +62,7 @@
 												</tileContent>
 											</GenericTile>
 											<GenericTile id="genericTileWageMaster" class="sapUiTinyMarginBegin sapUiTinyMarginTop" sizeBehavior="Small" header="Wage Master"
-												app:route="" press="onTilePress">
+												app:route="WageMaster" press="onTilePress">
 												<tileContent>
 													<TileContent>
 														<content>
@@ -72,7 +72,7 @@
 												</tileContent>
 											</GenericTile>
 											<GenericTile id="genericTileEmpGroups" class="sapUiTinyMarginBegin sapUiTinyMarginTop" sizeBehavior="Small" header="Employee Groups"
-												app:route="" press="onTilePress">
+												app:route="EmployeeGroup" press="onTilePress">
 												<tileContent>
 													<TileContent>
 														<content>
