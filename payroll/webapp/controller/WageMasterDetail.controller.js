@@ -9,11 +9,11 @@ sap.ui.define([
 		onInit: function () {
 			var that = this;
 			var oRouter = this.getRouter();
-			oRouter.getRoute("WageMasterDetail").attachMatched(this._onRouteMatched, this);
-			oRouter.getRoute("DetailOne").attachMatched(that._onObjectEditMatched, that);
+			oRouter.getRoute("WageMaster").attachMatched(this._onRouteMatched, this);
+			//oRouter.getRoute("DetailOne").attachPatternMatched(that._onObjectEditMatched, that);
 
 		},
-		_onObjectMatched: function () {
+		_onRouteMatched: function () {
 
 		},
 		_onObjectEditMatched: function (evt) {
