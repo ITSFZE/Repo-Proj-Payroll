@@ -3,7 +3,7 @@
 	<Page enableScrolling="true" title="Job Master" titleAlignment="Center">
 		<content>
 			<VBox fitContainer="true">
-				<Table items="{JobMaster>/JobMaster}" popinLayout="GridLarge" alternateRowColors="true">
+				<Table items="" popinLayout="GridLarge" alternateRowColors="true">
 					<headerToolbar>
 						<OverflowToolbar>
 							<content>
@@ -34,10 +34,10 @@
 					<items>
 						<ColumnListItem>
 							<cells>
-								<Text text="{JobMaster>name}"/>
-								<Text text="{JobMaster>position}"/>
-								<Text text="{JobMaster>cDate}"/>
-								<Text text="{JobMaster>mDate}"/>
+								<Text text="Software"/>
+								<Text text="5"/>
+								<Text text="12/07/2018"/>
+								<Text text="12/07/2019"/>
 								<Button icon="sap-icon://edit" press="onPressEditJobMaster"/>
 								<Button icon="sap-icon://employee"/>
 								<Button icon="sap-icon://add-employee"/>
