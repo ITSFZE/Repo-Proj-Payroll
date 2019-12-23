@@ -133,7 +133,6 @@ sap.ui.define([
 		},
 		onTilePress: function (oEvt) {
 			var that = this;
-			var getSessionData = this.getContext();
 			var getPages = oEvt.getSource().data("routes");
 				switch (getPages) {
 					case 'JobMaster':
