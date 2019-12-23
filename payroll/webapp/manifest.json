@@ -111,6 +111,14 @@
 				"name": "CreateEmployeeGroup",
 				"pattern": "CreateEmployeeGroup",
 				"target": ["CreateEmployeeGroup"]
+			},{
+				"name": "splitMasterAndDetail",
+				"pattern": "",
+				"target": ["WageMaster", "WageMasterDetail"]
+			}, {
+				"name": "DetailOne",
+				"pattern": "WageMasterDetail/{id}",
+				"target": ["WageMaster", "WageMasterDetail"]
 			}],
 
 			"targets": {
@@ -156,6 +164,18 @@
 					"viewType": "XML",
 					"viewName": "CreateEmployeeGroup",
 					"viewLevel": 8
+				},
+				"WageMaster": {
+					"viewType": "XML",
+					"viewName": "WageMaster",
+					"controlAggregation": "masterPages",
+					"controlId": "SplitCont"
+				},
+				"WageMasterDetail": {
+					"viewType": "XML",
+					"viewName": "WageMasterDetail",
+					"controlAggregation": "detailPages",
+					"controlId": "SplitCont"
 				}
 			}
 		}
