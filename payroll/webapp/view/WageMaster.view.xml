@@ -1,0 +1,46 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.app.payroll.controller.WageMaster"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<Page title="WageTypeMaster" showHeader="false">
+		<content>
+			<!--	<List items="{path:'data>/wageTypes'}" headerText="WageType" growing="true" growingThreshold="4" growingScrollToLoad="false">
+				<StandardListItem title="{data>wageType}" description="{data>category}"/>
+			</List>-->
+			<Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
+				<headerToolbar>
+					<OverflowToolbar height="3rem" style="Clear">
+						<Title text="wage Types"/>
+						<ToolbarSpacer/>
+						<Button icon="sap-icon://add"/>
+						<Button icon="sap-icon://drop-down-list"/>
+					</OverflowToolbar>
+				</headerToolbar>
+				<content>
+					<VBox class="sapUiSmallMargin">
+						<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" title="" labelSpanXL="3" labelSpanL="3" labelSpanM="3"
+							labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+							singleContainerFullSize="false">
+							<f:content>
+								<Label text="Category"/>
+								
+								<Select id="select" items="{ path:'data>/wageTypes', sorter: { path: 'wageType' } }">
+									<items>
+										<core:Item key="{data>category}" text="{data>category}"/>
+									</items>
+								</Select>
+								<Label text="Wage Type"/>
+								<Input id="name" value="{data>wageType}"/>
+								<Button text="Search" type="Emphasized" press="onSearch"></Button>
+							</f:content>
+						</f:SimpleForm>
+					</VBox>
+				</content>
+			</Panel>
+			<List id="l" items="{path:'data>/wageTypes'}" headerText="">
+				<ObjectListItem title="{data>wageType}" type="Active" press="onListItemPress">
+					<ObjectAttribute text="{data>category}"/>
+					<ObjectAttribute text="{data>Excemption}"/>
+				</ObjectListItem>
+			</List>
+		</content>
+	</Page>
+</mvc:View>

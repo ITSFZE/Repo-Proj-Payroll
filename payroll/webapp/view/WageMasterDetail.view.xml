@@ -1,0 +1,46 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.app.payroll.controller.WageMasterDetail"
+	xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Detail" id="page1" showHeader="false">
+		<content>
+			
+				<Panel expandable="false" width="auto" class="sapUiResponsiveMargin">
+		<headerToolbar>
+			<OverflowToolbar height="3rem" style="Clear">
+				<Title text="{DetailOne>/wageType}" />
+				<ToolbarSpacer />
+				<Button icon="sap-icon://edit" />
+			
+			</OverflowToolbar>
+		</headerToolbar>
+		<content>
+			<VBox class="sapUiSmallMargin">
+			<f:SimpleForm id="SimpleFormDisplay354" editable="false" layout="ResponsiveGridLayout" title="" labelSpanXL="3"
+					labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0"
+					columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+						
+					<f:content>
+						<Label text="Wage Type Name"/>
+						<Text id="nameText" text="{DetailOne>/wageType}"/>
+						<Label text="Category"/>
+						<Text text="{DetailOne>/category}"/>
+						<Label text="Exemption"/>
+						<Text text="{DetailOne>/Excemption}"/>
+						<Label text="Proration"/>
+						<Text id="countryText" text="{DetailOne>/Proration}"/>
+						<Label text="Input Combination"/>
+						<Text id="Ic" text="{DetailOne>/InputCombination}"/>
+						<Label text="Day Factor"/>
+						<Text id="df" text="{DetailOne>/DayFactor}"/>
+						<Label text="Display In Formsr"/>
+						<Text id="dif" text="{DetailOne>/DisplayInForms}"/>
+						<Label text="GroupType"/>
+						<Text id="gf" text="{DetailOne>/GroupType}"/>
+					</f:content>
+				</f:SimpleForm>
+			</VBox>
+		</content>
+	</Panel>
+			
+		</content>
+	</Page>
+</mvc:View>
