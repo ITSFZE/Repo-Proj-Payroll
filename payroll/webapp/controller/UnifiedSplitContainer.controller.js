@@ -12,9 +12,9 @@ sap.ui.define([
 	"sap/m/MessagePopover"
 ], function (BaseController, JSONModel, Fragment, MessageToast, Button, Dialog, ButtonType, Text, MessageItem, Link, MessagePopover) {
 	"use strict";
-	return BaseController.extend("com.app.payroll.controller.SplitContainer", {
+	return BaseController.extend("com.app.payroll.controller.UnifiedSplitContainer", {
 		onInit: function () {
-			var oRouter = this.getRouter();
+            var oRouter = this.getRouter();
 			oRouter.attachRouteMatched(this._onRouteMatched, this);
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 			var oUserModel = new JSONModel(sap.ui.require.toUrl("com/app/payroll/model/UserData.json"));

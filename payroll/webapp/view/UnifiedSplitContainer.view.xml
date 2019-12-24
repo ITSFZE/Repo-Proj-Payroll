@@ -1,6 +1,6 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:semantic="sap.m.semantic"
 	xmlns:c="sap.suite.ui.microchart" xmlns:l="sap.ui.layout" displayBlock="true" xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" controllerName="com.app.payroll.controller.Dashboard">
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" controllerName="com.app.payroll.controller.UnifiedSplitContainer">
 	<Page showHeader="false">
 		<content>
 			<tnt:ToolPage id="toolPage" sideExpanded="false">
@@ -45,47 +45,11 @@
 					</tnt:SideNavigation>
 				</tnt:sideContent>
 				<tnt:mainContents>
-					<NavContainer id="pageContainer">
-						<Page showHeader="false" id="dashBoard">
-							<content>
-								<l:BlockLayout id="dashBLayout">
-									<l:BlockLayoutRow>
-										<l:BlockLayoutCell title="Masters">
-											<GenericTile id="genericTileJobMaster" class="sapUiTinyMarginBegin sapUiTinyMarginTop" sizeBehavior="Small" header="Job Master" app:route="JobMaster"
-												press="onTilePress">
-												<tileContent>
-													<TileContent>
-														<content>
-															<ImageContent src="sap-icon://work-history"/>
-														</content>
-													</TileContent>
-												</tileContent>
-											</GenericTile>
-											<GenericTile id="genericTileWageMaster" class="sapUiTinyMarginBegin sapUiTinyMarginTop" sizeBehavior="Small" header="Wage Master"
-												app:route="WageMaster" press="onTilePress">
-												<tileContent>
-													<TileContent>
-														<content>
-															<ImageContent src="sap-icon://money-bills"/>
-														</content>
-													</TileContent>
-												</tileContent>
-											</GenericTile>
-											<GenericTile id="genericTileEmpGroups" class="sapUiTinyMarginBegin sapUiTinyMarginTop" sizeBehavior="Small" header="Employee Groups"
-												app:route="EmployeeGroup" press="onTilePress">
-												<tileContent>
-													<TileContent>
-														<content>
-															<ImageContent src="sap-icon://group"/>
-														</content>
-													</TileContent>
-												</tileContent>
-											</GenericTile>
-										</l:BlockLayoutCell>
-									</l:BlockLayoutRow>
-								</l:BlockLayout>
-							</content>
-						</Page>
+					<NavContainer id="NavContainer">
+						<SplitContainer id="UnifiedSplitContainer" mode="HideMode">
+							<masterPages id="uSCMasterPages"></masterPages>
+							<detailPages id="uSCDetailPages"></detailPages>
+						</SplitContainer>
 					</NavContainer>
 				</tnt:mainContents>
 			</tnt:ToolPage>

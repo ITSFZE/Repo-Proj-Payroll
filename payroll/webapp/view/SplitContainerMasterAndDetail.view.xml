@@ -14,13 +14,13 @@
 						<ToolbarSpacer/>
 						<Text text="HOME"/>
 						<ToolbarSpacer/>
-						<Button id="userQuickView" type="Emphasized" tooltip="User Quick View" icon="sap-icon://customer" press="onPressUserQuickView">
+						<Button id="userQuickView" type="Emphasized" tooltip="User Profile" icon="sap-icon://customer" press="onPressUserQuickView">
 							<layoutData>
 								<OverflowToolbarLayoutData priority="NeverOverflow"/>
 								<FlexItemData growFactor="1"/>
 							</layoutData>
 						</Button>
-						<Button id="logoutBtn" type="Reject" tooltip="Logout" icon="sap-icon://log" press="onPressLogout">
+						<Button id="logoutBtn" type="Negative" tooltip="Logout" icon="sap-icon://log" press="onPressLogout">
 							<layoutData>
 								<OverflowToolbarLayoutData priority="NeverOverflow"/>
 							</layoutData>

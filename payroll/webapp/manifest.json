@@ -124,6 +124,9 @@
 				"SplitContainerMasterAndDetail": {
 					"viewName": "SplitContainerMasterAndDetail"
 				},
+				"UnifiedSplitContainer": {
+					"viewName": "UnifiedSplitContainer"
+				},
 				"Login": {
 					"viewName": "Login",
 					"viewLevel": 1
@@ -134,26 +137,44 @@
 				},
 				"JobMaster": {
 					"viewName": "JobMaster",
+					"parent": "UnifiedSplitContainer",
+					"controlId": "UnifiedSplitContainer",
+					"controlAggregation": "detailPages",
 					"viewLevel": 3
 				},
 				"EditJobMaster": {
 					"viewName": "EditJobMaster",
+					"parent": "UnifiedSplitContainer",
+					"controlId": "UnifiedSplitContainer",
+					"controlAggregation": "detailPages",
 					"viewLevel": 4
 				},
 				"CreateJob": {
 					"viewName": "CreateJob",
+					"parent": "UnifiedSplitContainer",
+					"controlId": "UnifiedSplitContainer",
+					"controlAggregation": "detailPages",
 					"viewLevel": 5
 				},
 				"EmployeeGroup": {
 					"viewName": "EmployeeGroup",
+					"parent": "UnifiedSplitContainer",
+					"controlId": "UnifiedSplitContainer",
+					"controlAggregation": "detailPages",
 					"viewLevel": 6
 				},
 				"UpdateEmployeeGroup": {
 					"viewName": "UpdateEmployeeGroup",
+					"parent": "UnifiedSplitContainer",
+					"controlId": "UnifiedSplitContainer",
+					"controlAggregation": "detailPages",
 					"viewLevel": 7
 				},
 				"CreateEmployeeGroup": {
 					"viewName": "CreateEmployeeGroup",
+					"parent": "UnifiedSplitContainer",
+					"controlId": "UnifiedSplitContainer",
+					"controlAggregation": "detailPages",
 					"viewLevel": 8
 				},
 				"WageMaster": {
