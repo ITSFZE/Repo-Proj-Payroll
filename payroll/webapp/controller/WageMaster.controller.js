@@ -16,6 +16,9 @@ sap.ui.define([
 		_onRouteMatched: function() {
 
 		},
+		onPressNavBack: function(){
+			this.getRouter().navTo("Dashboard");
+		},
 		onListItemPress: function (oEvent) {
 
 		},
