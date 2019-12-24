@@ -11,15 +11,18 @@
 		"items": [{
 			"title": "Job Master",
 			"icon": "sap-icon://work-history",
-			"expanded": false
+			"expanded": false,
+			"key": "JobMaster"
 		}, {
 			"title": "Wage Master",
 			"icon": "sap-icon://money-bills",
-			"expanded": false
+			"expanded": false,
+			"key": "WageMaster"
 		}, {
 			"title": "Employee Groups",
 			"icon": "sap-icon://group",
-			"expanded": false
+			"expanded": false,
+			"key": "EmployeeGroup"
 		}]
 	}],
 	"fixedNavigation": [{

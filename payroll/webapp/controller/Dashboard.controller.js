@@ -128,9 +128,21 @@ sap.ui.define([
 			var toolPage = sap.ui.getCore().byId(viewId + "--toolPage");
 			toolPage.setSideExpanded(false);
 			var item = oEvent.getParameter("item");
-			switch (item.getKey()) {
+				switch (item.getKey()) {
+					case 'JobMaster':
+						that.getRouter().navTo(item.getKey());
+						break;
+					case 'WageMaster':
+						that.getRouter().navTo(item.getKey());
+						break;
+					case 'EmployeeGroup':
+						that.getRouter().navTo(item.getKey());
+						break;
+					default:
+						this.getRouter().navTo(item.getKey());
+						break;
 
-			}
+				}
 		},
 		onTilePress: function (oEvt) {
 			var that = this;
