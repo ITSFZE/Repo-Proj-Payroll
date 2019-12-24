@@ -14,6 +14,9 @@ sap.ui.define([
 			oRouter.getRoute("WageMaster").attachMatched(this._onRouteMatched, this);
 
 		},
+		onPressNavBack: function(){
+			this.getRouter().navTo("Dashboard");
+		},
 		onListItemPress: function (oEvent) {
 
 			var oItem, oContext;

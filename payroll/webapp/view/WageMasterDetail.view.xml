@@ -1,6 +1,6 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.app.payroll.controller.WageMasterDetail"
 	displayBlock="true" xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page title="Detail" id="page1" showHeader="false">
+	<Page title="Wage Master Details" id="page1" showHeader="true">
 		<content>
 			<Panel expandable="false" width="auto" class="sapUiResponsiveMargin">
 				<headerToolbar>
