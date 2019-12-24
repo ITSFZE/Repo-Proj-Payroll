@@ -122,45 +122,37 @@
 			}],
 			"targets": {
 				"SplitContainerMasterAndDetail": {
-					"viewName": "view.SplitContainerMasterAndDetail"
+					"viewName": "SplitContainerMasterAndDetail"
 				},
 				"Login": {
-					"viewType": "XML",
 					"viewName": "Login",
 					"viewLevel": 1
 				},
 				"Dashboard": {
-					"viewId": "Dashboard",
 					"viewName": "Dashboard",
 					"viewLevel": 2
 				},
 				"JobMaster": {
-					"viewType": "XML",
 					"viewName": "JobMaster",
 					"viewLevel": 3
 				},
 				"EditJobMaster": {
-					"viewType": "XML",
 					"viewName": "EditJobMaster",
 					"viewLevel": 4
 				},
 				"CreateJob": {
-					"viewType": "XML",
 					"viewName": "CreateJob",
 					"viewLevel": 5
 				},
 				"EmployeeGroup": {
-					"viewType": "XML",
 					"viewName": "EmployeeGroup",
 					"viewLevel": 6
 				},
 				"UpdateEmployeeGroup": {
-					"viewType": "XML",
 					"viewName": "UpdateEmployeeGroup",
 					"viewLevel": 7
 				},
 				"CreateEmployeeGroup": {
-					"viewType": "XML",
 					"viewName": "CreateEmployeeGroup",
 					"viewLevel": 8
 				},

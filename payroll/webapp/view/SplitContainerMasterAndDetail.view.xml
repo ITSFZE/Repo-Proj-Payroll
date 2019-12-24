@@ -46,9 +46,9 @@
 				</tnt:sideContent>
 				<tnt:mainContents>
 					<NavContainer id="NavContainer">
-						<SplitContainer id="SplitCont" mode="ShowHideMode">
-							<detailPages></detailPages>
-							<masterPages></masterPages>
+						<SplitContainer id="SplitContainer" mode="ShowHideMode">
+							<masterPages id="sCMasterPages"></masterPages>
+							<detailPages id="sCDetailPages"></detailPages>
 						</SplitContainer>
 					</NavContainer>
 				</tnt:mainContents>
