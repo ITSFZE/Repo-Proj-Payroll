@@ -84,8 +84,8 @@ sap.ui.define([
 					type: ButtonType.Emphasized,
 					text: "Sign-Out",
 					press: function () {
-						MessageToast.show("Submit pressed!");
 						oDialog.close();
+						this.getRouter().navTo("Login");
 					}
 				}),
 				endButton: new Button({
@@ -147,7 +147,6 @@ sap.ui.define([
 					default:
 							this.getRouter().navTo(getPages);
 				}
-			
 		}
 	});
 });

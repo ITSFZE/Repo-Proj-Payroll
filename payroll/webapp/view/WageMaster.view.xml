@@ -8,9 +8,9 @@
 		</subHeader>
 		<content>
 			<List id="wageTypeList" items="" growing="true" growingThreshold="10" noDataText="No Data">
-				<ObjectListItem title="" type="" press="onListItemPress">
+				<ObjectListItem title="" press="onListItemPress">
 					<secondStatus>
-						<ObjectStatus text="" state=""/>
+						<ObjectStatus text="" />
 					</secondStatus>
 					<attributes>
 						<ObjectAttribute text=""/>
