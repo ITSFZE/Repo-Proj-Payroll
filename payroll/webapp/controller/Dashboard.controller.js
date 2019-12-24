@@ -73,6 +73,7 @@ sap.ui.define([
 			}
 		},
 		onPressLogout: function () {
+			var that = this;
 			var oDialog = new Dialog({
 				title: "Confirm",
 				type: "Message",
@@ -85,7 +86,7 @@ sap.ui.define([
 					text: "Sign-Out",
 					press: function () {
 						oDialog.close();
-						this.getRouter().navTo("Login");
+						that.getRouter().navTo("Login");
 					}
 				}),
 				endButton: new Button({
