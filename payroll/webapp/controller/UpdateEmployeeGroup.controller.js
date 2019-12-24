@@ -5,10 +5,12 @@ sap.ui.define([
 
 	return BaseController.extend("com.app.payroll.controller.UpdateEmployeeGroup", {
 		onInit: function () {
+			var oRouter = this.getRouter();
+			oRouter.getRoute("UpdateEmployeeGroup").attachMatched(this._onRouteMatched, this);
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 		},
 		onPressNavBack: function () {
-			this.getOwnerComponent().getRouter().navTo("EmployeeGroup");
+			this.getRouter().navTo("EmployeeGroup");
 		}
 		
 	});

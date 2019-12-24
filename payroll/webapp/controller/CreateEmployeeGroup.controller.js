@@ -7,12 +7,14 @@ sap.ui.define([
 
 	return BaseController.extend("com.app.payroll.controller.CreateEmployeeGroup", {
 		onInit: function () {
+			var oRouter = this.getRouter();
+			oRouter.getRoute("CreateEmployeeGroup").attachMatched(this._onRouteMatched, this);
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 			var oModel = new JSONModel("/EmployeeDetail.json");
 			this.getView().setModel(oModel);
 		},
 		onPressNavBack: function () {
-			this.getOwnerComponent().getRouter().navTo("EmployeeGroup");
+			this.getRouter().navTo("EmployeeGroup");
 		}
 	});
 
