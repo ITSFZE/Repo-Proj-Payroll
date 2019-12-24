@@ -21,7 +21,7 @@
 			</f:SimpleForm>
 			<FlexBox justifyContent="Center" alignItems="Center" class="sapUiMediumMarginTop">
 				<items>
-					<Button text="Create" type="Ghost" press="onPress" width="100%" icon="sap-icon://save" iconFirst="true"/>
+					<Button text="Create" type="Ghost" press="onPress" tooltip="Create" width="100%" icon="sap-icon://save" iconFirst="true"/>
 				</items>
 			</FlexBox>
 		</content>
