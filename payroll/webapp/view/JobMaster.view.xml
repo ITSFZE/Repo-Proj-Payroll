@@ -10,7 +10,7 @@
 								<Title text="Job Master List" titleStyle="Auto"/>
 								<ToolbarSpacer/>
 								<SearchField width="25%" class="sapUiSmallMarginEnd"/>
-								<Button text="Create Job" type="Ghost" class="sapUiMediumMarginEnd" press="onPressCreateJob"/>
+								<Button text="Create Job" type="Ghost" class="sapUiMediumMarginEnd" press="onPressCreateJob" tooltip="Add Job"></Button>
 							</content>
 						</OverflowToolbar>
 					</headerToolbar>
@@ -38,9 +38,9 @@
 								<Text text="5"/>
 								<Text text="12/07/2018"/>
 								<Text text="12/07/2019"/>
-								<Button icon="sap-icon://edit" press="onPressEditJobMaster"/>
-								<Button icon="sap-icon://employee"/>
-								<Button icon="sap-icon://add-employee"/>
+								<Button icon="sap-icon://edit" press="onPressEditJobMaster" tooltip="Edit Job"/>
+								<Button icon="sap-icon://employee" tooltip="Manage Position"/>
+								<Button icon="sap-icon://add-employee" tooltip="Add Position"/>
 							</cells>
 						</ColumnListItem>
 					</items>
