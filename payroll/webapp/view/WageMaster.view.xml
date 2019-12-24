@@ -1,42 +1,33 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.app.payroll.controller.WageMaster"
 	displayBlock="true" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
-	<Page title="WageTypeMaster" showHeader="false">
+	<Page title="Wage Type Master" showHeader="false" titleAlignment="Center" showNavButton="true" navButtonPress="onPressNavBack">
+	<subHeader>
+			<Toolbar>
+				<SearchField id="wageTypeSearchField" search="onSearchWageType" placeholder="Please Enter Your Choice"/>
+			</Toolbar>
+		</subHeader>
 		<content>
-			<Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
-				<headerToolbar>
-					<OverflowToolbar height="3rem" style="Clear">
-						<Title text="wage Types"/>
-						<ToolbarSpacer/>
-						<Button icon="sap-icon://add"/>
-						<Button icon="sap-icon://drop-down-list"/>
-					</OverflowToolbar>
-				</headerToolbar>
-				<content>
-					<VBox class="sapUiSmallMargin">
-						<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" title="" labelSpanXL="3" labelSpanL="3" labelSpanM="3"
-							labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
-							singleContainerFullSize="false">
-							<f:content>
-								<Label text="Category"/>
-								<Select id="select" items="{ path:'data>/wageTypes', sorter: { path: 'wageType' } }">
-									<items>
-										<core:Item key="{data>category}" text="{data>category}"/>
-									</items>
-								</Select>
-								<Label text="Wage Type"/>
-								<Input id="name" value="{data>wageType}"/>
-								<Button text="Search" type="Emphasized" press="onSearch"></Button>
-							</f:content>
-						</f:SimpleForm>
-					</VBox>
-				</content>
-			</Panel>
-			<List id="l" items="{path:'data>/wageTypes'}" headerText="">
-				<ObjectListItem title="{data>wageType}" type="Active" press="onListItemPress">
-					<ObjectAttribute text="{data>category}"/>
-					<ObjectAttribute text="{data>Excemption}"/>
+			<List id="wageTypeList" items="" growing="true" growingThreshold="10" noDataText="No Data">
+				<ObjectListItem title="" type="" press="onListItemPress">
+					<secondStatus>
+						<ObjectStatus text="" state=""/>
+					</secondStatus>
+					<attributes>
+						<ObjectAttribute text=""/>
+					</attributes>
 				</ObjectListItem>
 			</List>
 		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<OverflowToolbarButton tooltip="Filter" icon="sap-icon://add-filter" press="onPressFilterSeasons">
+					<customData>
+						<core:CustomData key="multi" value="true"/>
+						<core:CustomData key="remember" value="true"/>
+					</customData>
+				</OverflowToolbarButton>
+			</Toolbar>
+		</footer>
 	</Page>
 </mvc:View>

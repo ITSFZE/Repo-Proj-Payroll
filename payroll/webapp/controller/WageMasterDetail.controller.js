@@ -7,22 +7,17 @@ sap.ui.define([
 	return BaseController.extend("com.app.payroll.controller.WageMasterDetail", {
 
 		onInit: function () {
-			var that = this;
 			var oRouter = this.getRouter();
-			oRouter.getRoute("WageMaster").attachMatched(this._onRouteMatched, this);
-			//oRouter.getRoute("DetailOne").attachPatternMatched(that._onObjectEditMatched, that);
-
-		}
+			oRouter.getRoute("WageMasterDetail").attachMatched(this._onCreateRouteMatched, this);
+			oRouter.getRoute("EditWageMasterDetail").attachMatched(this._onEditRouteMatched, this);
+			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 		},
-		_onObjectEditMatched: function (evt) {
-		  var getPars = evt.getParameters().arguments;
-		  var getMDL = this.getView().getModel("data");
-		  var getMDLData  = getMDL.mContexts["/wageTypes/"+getPars.id].getObject();
-		  var ddModel = new JSONModel(getMDLData);
-		  this.getView().setModel(ddModel,"DetailOne");
-		  
-		}
+		_onCreateRouteMatched: function(){
 
+		},
+		_onEditRouteMatched: function(){
+
+		}
 	});
 
 });
