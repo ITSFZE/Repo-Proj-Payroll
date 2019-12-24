@@ -9,6 +9,9 @@ sap.ui.define([
 		onInit: function () {
 
 		},
+		onPressNavBack: function(){
+			this.getOwnerComponent().getRouter().navTo("Dashboard");
+		},
 		onPressAdd: function () {
 			this.getOwnerComponent().getRouter().navTo("CreateEmployeeGroup");
 		},

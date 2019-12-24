@@ -20,9 +20,7 @@ sap.ui.define([
 			oItem = oEvent.getSource();
 			oContext = oItem.getBindingContext("data");
 			this.getOwnerComponent().getRouter()
-				.navTo("DetailOne", {
-					id: oContext.getProperty("id")
-				});
+				.navTo("DetailOne", {id: oContext.getProperty("id")});
 
 		},
 		onSearch: function (oEvent) {

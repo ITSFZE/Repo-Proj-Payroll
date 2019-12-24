@@ -10,6 +10,7 @@ sap.ui.define([
 		onPressNavBack: function () {
 			this.getOwnerComponent().getRouter().navTo("EmployeeGroup");
 		}
+		
 	});
 
 });

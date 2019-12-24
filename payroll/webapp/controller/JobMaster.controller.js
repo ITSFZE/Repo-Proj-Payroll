@@ -14,6 +14,9 @@ sap.ui.define([
 		},
 		onPressEditJobMaster:function(){
 			this.getOwnerComponent().getRouter().navTo("EditJobMaster");
+		},
+		onPressNavBack: function(){
+			this.getOwnerComponent().getRouter().navTo("Dashboard");
 		}
 	});
 });
