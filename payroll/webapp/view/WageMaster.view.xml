@@ -7,16 +7,17 @@
 			</Toolbar>
 		</subHeader>
 		<content>
-			<List id="wageTypeList" items="" growing="true" growingThreshold="10" noDataText="No Data">
-				<ObjectListItem title="" press="onListItemPress">
+			<List id="wageTypeList" items="{path:'/wageTypes'}" growing="true" growingThreshold="10" noDataText="No Data">
+				<ObjectListItem title="{wageType}" type="Active" press="onListItemPress">
 					<secondStatus>
-						<ObjectStatus text="" />
+						<ObjectStatus text="{category}" />
 					</secondStatus>
 					<attributes>
-						<ObjectAttribute text=""/>
+						<ObjectAttribute text="{Excemption}"/>
 					</attributes>
 				</ObjectListItem>
 			</List>
+		
 		</content>
 		<footer>
 			<Toolbar>
