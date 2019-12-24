@@ -10,13 +10,13 @@ sap.ui.define([
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 		},
 		onPressCreateJob:function(){
-			this.getOwnerComponent().getRouter().navTo("CreateJob");
+			this.getRouter().navTo("CreateJob");
 		},
 		onPressEditJobMaster:function(){
-			this.getOwnerComponent().getRouter().navTo("EditJobMaster");
+			this.getRouter().navTo("EditJobMaster");
 		},
 		onPressNavBack: function(){
-			this.getOwnerComponent().getRouter().navTo("Dashboard");
+			this.getRouter().navTo("Dashboard");
 		}
 	});
 });
