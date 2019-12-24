@@ -1,6 +1,6 @@
 <mvc:View controllerName="com.app.payroll.controller.JobMaster" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
 	xmlns:c="sap.ui.core" xmlns:f="sap.ui.layout.form">
-	<Page enableScrolling="true" title="Job Master" titleAlignment="Center" showNavButton="true" navButtonPress="onPressNavBack">
+	<Page enableScrolling="true" title="Job Master" showNavButton="true" navButtonPress="onPressNavBack">
 		<content>
 			<VBox fitContainer="true">
 				<Table items="" popinLayout="GridLarge" alternateRowColors="true">

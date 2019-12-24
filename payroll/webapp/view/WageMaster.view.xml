@@ -1,6 +1,6 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.app.payroll.controller.WageMaster"
 	displayBlock="true" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
-	<Page title="Wage Type Master" showHeader="false" titleAlignment="Center" showNavButton="true" navButtonPress="onPressNavBack">
+	<Page title="Wage Type Master" showNavButton="true" navButtonPress="onPressNavBack">
 	<subHeader>
 			<Toolbar>
 				<SearchField id="wageTypeSearchField" search="onSearchWageType" placeholder="Please Enter Your Choice"/>
