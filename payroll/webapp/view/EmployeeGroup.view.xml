@@ -44,8 +44,8 @@
 						<ObjectIdentifier title="{employee>GroupCode}"/>
 						<ObjectIdentifier title="{employee>CreatedDate}"/>
 						<ObjectIdentifier title="{employee>Status}"/>
-						<Button type="Ghost" icon="sap-icon://show" tooltip="showEmployeeDetail"/>
-						<Button type="Ghost" icon="sap-icon://edit" tooltip="editEmployeeDetail" press="onPressUpdateEmplyeeGroup"/>
+						<Button type="Ghost" icon="sap-icon://show" tooltip="ShowEmployeeDetail"/>
+						<Button type="Ghost" icon="sap-icon://edit" tooltip="EditEmployeeGroup" press="onPressUpdateEmplyeeGroup"/>
 					</cells>
 				</ColumnListItem>
 			</items>
