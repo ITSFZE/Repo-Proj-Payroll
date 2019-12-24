@@ -13,10 +13,19 @@ sap.ui.define([
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 		},
 		_onCreateRouteMatched: function(){
-
+			var ddModel = new JSONModel({});
+			this.getView().setModel(ddModel,"EditWageMasterDetail");
+		
 		},
-		_onEditRouteMatched: function(){
+		_onEditRouteMatched: function(evt){
 
+			var getPars = evt.getParameters().arguments;
+			var getMDL = this.getView().getModel("undefined");
+			var getMDLData  = getMDL.mContexts["/wageTypes/"+getPars.id].getObject();
+			var ddModel = new JSONModel(getMDLData);
+			this.getView().setModel(ddModel,"EditWageMasterDetail");
+		
+			
 		}
 	});
 

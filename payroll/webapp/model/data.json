@@ -11,20 +11,114 @@
 		"items": [{
 			"title": "Job Master",
 			"icon": "sap-icon://work-history",
-			"expanded": false
+			"expanded": false,
+			"key": "JobMaster"
 		}, {
 			"title": "Wage Master",
 			"icon": "sap-icon://money-bills",
-			"expanded": false
+			"expanded": false,
+			"key": "WageMaster"
 		}, {
 			"title": "Employee Groups",
 			"icon": "sap-icon://group",
-			"expanded": false
+			"expanded": false,
+			"key": "EmployeeGroup"
 		}]
 	}],
 	"fixedNavigation": [{
 		"title": "Settings",
 		"icon": "sap-icon://action-settings",
 		"expanded": false
-	}]
+	}],
+	"wageTypes":[
+		{
+			"id":0,
+			"wageType":"TDS-Ke",
+			"category":"Satutory",
+			"Excemption":"No",
+		    "Proration":"No",
+			"InputCombination":"Amount",
+			"DayFactor":"Actuals",
+			"DisplayInForms":"None",
+			"GroupType":"Main"
+		},
+		{
+			"id":1,
+			"wageType":"One Min Salary",
+			"category":"Basis",
+			"Excemption":"No",
+			"Proration":"No",
+			"InputCombination":"Amount",
+			"DayFactor":"Actuals",
+			"DisplayInForms":"None",
+			"GroupType":"Main",
+			"a1":[
+						{
+			"id":1,
+			"wageType":"One Min Salary",
+			"category":"Basis",
+			"Excemption":"No",
+			"Proration":"No",
+			"InputCombination":"Amount",
+			"DayFactor":"Actuals",
+			"DisplayInForms":"None",
+			"GroupType":"Main"
+							
+						}
+				]
+		},
+		{
+			"id":2,
+			"wageType":"30 Minutes OT",
+			"category":"Time Process Payment",
+			"Excemption":"Yes",
+			"Proration":"No",
+			"InputCombination":"Amount",
+			"DayFactor":"Actuals",
+			"DisplayInForms":"Payment and Deduction",
+			"GroupType":"Main",
+				"a1":[
+						{
+		"id":2,
+			"wageType":"30 Minutes OT",
+			"category":"Time Process Payment",
+			"Excemption":"Yes",
+			"Proration":"No",
+			"InputCombination":"Amount",
+			"DayFactor":"Actuals",
+			"DisplayInForms":"Payment and Deduction",
+			"GroupType":"Main"
+							
+						}
+				]
+			
+		},
+		{
+			"id":3,
+			"wageType":"Break Rule 30",
+			"category":"Time Process Deduction",
+			"Excemption":"No",
+			"Proration":"No",
+			"InputCombination":"Amount",
+			"DayFactor":"Actuals",
+			"DisplayInForms":"Payment and Deduction",
+			"GroupType":"Main",
+				"a1":[
+						{
+			"id":3,
+			"wageType":"Break Rule 30",
+			"category":"Time Process Deduction",
+			"Excemption":"No",
+			"Proration":"No",
+			"InputCombination":"Amount",
+			"DayFactor":"Actuals",
+			"DisplayInForms":"Payment and Deduction",
+			"GroupType":"Main"
+							
+						}
+				]
+			
+		}
+		]
+		
 }

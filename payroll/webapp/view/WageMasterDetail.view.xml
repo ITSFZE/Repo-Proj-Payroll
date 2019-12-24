@@ -7,7 +7,7 @@
 					<OverflowToolbar height="3rem" style="Clear">
 						<Title text=""/>
 						<ToolbarSpacer/>
-						<Button icon="sap-icon://edit"/>
+						<Button icon="sap-icon://edit" type="Ghost" tooltip="Edit"/>
 					</OverflowToolbar>
 				</headerToolbar>
 				<content>
@@ -17,21 +17,21 @@
 							columnsL="1" columnsM="1" singleContainerFullSize="false">
 							<f:content>
 								<Label text="Wage Type Name"/>
-								<Text text=""/>
+								<Text text="{EditWageMasterDetail>/wageType}"/>
 								<Label text="Category"/>
-								<Text text=""/>
+								<Text text="{EditWageMasterDetail>/category}"/>
 								<Label text="Exemption"/>
-								<Text text=""/>
+								<Text text="{EditWageMasterDetail>/Excemption}"/>
 								<Label text="Proration"/>
-								<Text text=""/>
+								<Text text="{EditWageMasterDetail>/Proration}"/>
 								<Label text="Input Combination"/>
-								<Text text=""/>
+								<Text text="{EditWageMasterDetail>/InputCombination}"/>
 								<Label text="Day Factor"/>
-								<Text text=""/>
+								<Text text="{EditWageMasterDetail>/DayFactor}"/>
 								<Label text="Display In Forms"/>
-								<Text text=""/>
+								<Text text="{EditWageMasterDetail>/DisplayInForms}"/>
 								<Label text="Group Type"/>
-								<Text text=""/>
+								<Text text="{EditWageMasterDetail>/GroupType}"/>
 							</f:content>
 						</f:SimpleForm>
 					</VBox>
