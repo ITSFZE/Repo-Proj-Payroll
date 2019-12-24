@@ -11,7 +11,7 @@ sap.ui.define([
 			oRouter.getRoute("EmployeeGroup").attachMatched(this._onRouteMatched, this);
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 		},
-		onPressNavBack: function(){
+		onPressNavBack: function () {
 			this.getRouter().navTo("Dashboard");
 		},
 		onPressAdd: function () {

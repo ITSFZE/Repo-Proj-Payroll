@@ -12,7 +12,7 @@ sap.ui.define([
 		onPressNavBack: function () {
 			this.getRouter().navTo("EmployeeGroup");
 		}
-		
+
 	});
 
 });

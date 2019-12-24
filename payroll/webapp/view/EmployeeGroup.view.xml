@@ -15,7 +15,7 @@
 			</headerToolbar>
 			<columns>
 				<Column demandPopin="true" hAlign="Left">
-					<Label text="{i18n>columnGroupName}" design="Bold"/>
+					<Label text="{i18n>columnGroupName}" design="Bold"/> 
 				</Column>
 				<Column demandPopin="true" hAlign="Center">
 					<Label text="{i18n>columnEmployeeCount}" design="Bold"/>

@@ -15,7 +15,7 @@
 				<Input/>
 				<Label text="Status" required="true"/>
 				<ComboBox items="{ path: '/Grouptype' }">
-					<core:Item key="{key}" text="{text}"/>
+					<core:Item key="{key}" text="{text}"/> 
 				</ComboBox>
 				<Label text="Description"/><Input/>
 			</f:SimpleForm>

@@ -2,7 +2,7 @@ sap.ui.define([
 	"com/app/payroll/controller/BaseController",
 	"sap/ui/core/mvc/Controller",
 	'sap/ui/model/json/JSONModel'
-], function (BaseController,JSONModel) {
+], function (BaseController, JSONModel) {
 	"use strict";
 
 	return BaseController.extend("com.app.payroll.controller.CreateEmployeeGroup", {
