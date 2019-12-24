@@ -7,16 +7,18 @@ sap.ui.define([
 
 	return BaseController.extend("com.app.payroll.controller.EmployeeGroup", {
 		onInit: function () {
-
+			var oRouter = this.getRouter();
+			oRouter.getRoute("EmployeeGroup").attachMatched(this._onRouteMatched, this);
+			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 		},
 		onPressNavBack: function(){
-			this.getOwnerComponent().getRouter().navTo("Dashboard");
+			this.getRouter().navTo("Dashboard");
 		},
 		onPressAdd: function () {
-			this.getOwnerComponent().getRouter().navTo("CreateEmployeeGroup");
+			this.getRouter().navTo("CreateEmployeeGroup");
 		},
 		onPressUpdateEmplyeeGroup: function () {
-			this.getOwnerComponent().getRouter().navTo("UpdateEmployeeGroup");
+			this.getRouter().navTo("UpdateEmployeeGroup");
 		},
 		onFilterGroupType: function (oEvent) {
 			var aFilter = [];
