@@ -141,6 +141,9 @@ sap.ui.define([
 					case 'EmployeeGroup':
 							that.getRouter().navTo(getPages);
 						break;
+					case 'WageMaster':
+							that.getRouter().navTo(getPages);
+						break;
 					default:
 							this.getRouter().navTo(getPages);
 				}

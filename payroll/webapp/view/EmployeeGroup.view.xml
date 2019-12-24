@@ -1,11 +1,6 @@
 <mvc:View controllerName="com.app.payroll.controller.EmployeeGroup" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
 	xmlns="sap.m">
 	<Page id="page" class="sapUiContentPadding"  titleAlignment="Center"  showNavButton="true"  navButtonPress="onPressNavBack" title="Employee Group">
-		<customHeader>
-			<Toolbar>
-				<Label text="{i18n>Title}" design="Bold"/>
-			</Toolbar>
-		</customHeader>
 		<Table alternateRowColors="true" popinLayout="GridLarge" id="employee" headerText="{i18n>group}" class="sapUiResponsiveMargin" width="auto"
 			items="{ path : 'employee>/EmployeeDetail'}">
 			<headerToolbar>
