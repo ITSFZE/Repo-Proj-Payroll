@@ -11,8 +11,6 @@ sap.ui.define([
 			var oRouter = this.getRouter();
 			oRouter.getRoute("WageMaster").attachMatched(this._onRouteMatched, this);
 			//oRouter.getRoute("DetailOne").attachPatternMatched(that._onObjectEditMatched, that);
-
-		}
 		},
 		_onObjectEditMatched: function (evt) {
 		  var getPars = evt.getParameters().arguments;
