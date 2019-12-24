@@ -128,7 +128,18 @@ sap.ui.define([
 			toolPage.setSideExpanded(false);
 			var item = oEvent.getParameter("item");
 			switch (item.getKey()) {
-
+				case 'JobMaster':
+					that.getRouter().navTo(item.getKey());
+					break;
+				case 'WageMaster':
+					that.getRouter().navTo(item.getKey());
+					break;
+				case 'EmployeeGroup':
+					that.getRouter().navTo(item.getKey());
+					break;
+				default:
+					this.getRouter().navTo(item.getKey());
+					break;
 			}
 		}
 	});
