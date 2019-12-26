@@ -109,7 +109,7 @@ sap.ui.define([
 
 			if (!this._oPopover) {
 				Fragment.load({
-					name: "com.app.payroll.view.fragment.SettingsResponsivePopOver",
+					name: "com.app.payroll.view.fragment.SettingsMenuItem",
 					controller: this
 				}).then(function (oPopover) {
 					this._oPopover = oPopover;

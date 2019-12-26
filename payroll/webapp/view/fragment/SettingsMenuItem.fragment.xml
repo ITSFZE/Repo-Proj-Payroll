@@ -1,9 +1,11 @@
+<!--Settings MenuItem fragment is used for Dashboard, SplitContainer, and UnifiedSplitContainer Views 
+	for its Settings Menu pupose-->
 <core:FragmentDefinition
 	xmlns="sap.m"
 	xmlns:core="sap.ui.core"
 	xmlns:u="sap.ui.unified">
 
-	<!--Start from Settings Popover Menu from SideNavigation-->
+	<!--Starting MenuItem-->
 	<u:Menu
 			itemSelect="handleMenuItemPress">
 		<u:MenuItem
@@ -14,15 +16,14 @@
 		<u:MenuItem
 				text="ChangeLanguage" icon="sap-icon://text-color">
 
-			<!--Start from Language Popup Menu-->
 			<u:Menu>
 				<u:MenuItem  text="English" />
 				<u:MenuItem  text="Arabic" />
 				<u:MenuItem  text="Spanish" />
 				<u:MenuItem  text="Chinese" />
 			</u:Menu>
-			<!--Language Menu End-->
-			
+
 		</u:MenuItem>
 	</u:Menu>
+	<!--Ending MenuItem-->
 </core:FragmentDefinition>
