@@ -1,20 +1,25 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.app.payroll.controller.WageMasterDetail"
-	displayBlock="true" xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml">
+<!--WageMasterDetail view is used to create wage type and update wage type-->
+<mvc:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" controllerName="com.app.payroll.controller.WageMasterDetail" displayBlock="true" 
+	xmlns:f="sap.ui.layout.form" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="Wage Type Detail">
 		<content>
+			<!--Starting Panel-->
 			<Panel expandable="false" width="auto" class="sapUiResponsiveMargin">
 				<headerToolbar>
 					<OverflowToolbar height="3rem" style="Clear">
 						<Title text=""/>
 						<ToolbarSpacer/>
+						<!--Edit Button-->
 						<Button icon="sap-icon://edit" type="Ghost" tooltip="Edit"/>
 					</OverflowToolbar>
 				</headerToolbar>
 				<content>
 					<VBox class="sapUiSmallMargin">
-						<f:SimpleForm editable="false" layout="ResponsiveGridLayout" title="" labelSpanXL="3" labelSpanL="3"
-							labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
-							columnsL="1" columnsM="1" singleContainerFullSize="false">
+						<!--Starting SimpleForm-->
+						<f:SimpleForm editable="false" layout="ResponsiveGridLayout" title="" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
 							<f:content>
 								<Label text="Wage Type Name"/>
 								<Text text="{EditWageMasterDetail>/wageType}"/>
@@ -34,17 +39,22 @@
 								<Text text="{EditWageMasterDetail>/GroupType}"/>
 							</f:content>
 						</f:SimpleForm>
+						<!--Ending SimpleForm-->
 					</VBox>
 				</content>
 			</Panel>
+			<!--Ending Panel-->
 		</content>
+		<!--Starting Footer-->
 		<footer>
 			<Bar>
 				<contentRight>
+					<!--Save and Cancel Button-->
 					<Button icon="sap-icon://save" id="wageTypeSaveBtn" press="onPressWageTypeSave"/>
 					<Button id="wageTypeCancelBtn" icon="sap-icon://sys-cancel-2" press="onPressCancel"/>
 				</contentRight>
 			</Bar>
 		</footer>
+		<!--Ending Footer-->
 	</Page>
 </mvc:View>

@@ -1,11 +1,21 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:semantic="sap.m.semantic"
-	xmlns:c="sap.suite.ui.microchart" xmlns:l="sap.ui.layout" displayBlock="true" xmlns:html="http://www.w3.org/1999/xhtml"
+<!--UnifiedSplitContainer view is used to Showing the toolpage inside of the SplitContainer-->
+<mvc:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	xmlns:tnt="sap.tnt" 
+	xmlns:semantic="sap.m.semantic" 
+	xmlns:c="sap.suite.ui.microchart" 
+	xmlns:l="sap.ui.layout" displayBlock="true" 
+	xmlns:html="http://www.w3.org/1999/xhtml" 
 	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" controllerName="com.app.payroll.controller.UnifiedSplitContainer">
 	<Page showHeader="false">
 		<content>
+			<!--Starting ToolPage-->
 			<tnt:ToolPage id="toolPage" sideExpanded="false">
+				<!--Starting ToolHeader-->
 				<tnt:header>
 					<tnt:ToolHeader>
+						<!--Menu Button-->
 						<Button icon="sap-icon://menu2" tooltip="Menu" type="Transparent" press="handleMenuPress">
 							<layoutData>
 								<OverflowToolbarLayoutData priority="NeverOverflow"/>
@@ -14,12 +24,14 @@
 						<ToolbarSpacer/>
 						<Text text="HOME"/>
 						<ToolbarSpacer/>
+						<!--User Profile Button-->
 						<Button id="userQuickView" type="Emphasized" tooltip="User Profile" icon="sap-icon://customer" press="onPressUserQuickView">
 							<layoutData>
 								<OverflowToolbarLayoutData priority="NeverOverflow"/>
 								<FlexItemData growFactor="1"/>
 							</layoutData>
 						</Button>
+						<!--Logout Button-->
 						<Button id="logoutBtn" type="Negative" tooltip="Logout" icon="sap-icon://log" press="onPressLogout">
 							<layoutData>
 								<OverflowToolbarLayoutData priority="NeverOverflow"/>
@@ -27,14 +39,13 @@
 						</Button>
 					</tnt:ToolHeader>
 				</tnt:header>
+				<!--Ending ToolHeader-->
+				<!--Starting SideContent-->
 				<tnt:sideContent>
 					<tnt:SideNavigation expanded="false" itemSelect="onItemSelect">
 						<tnt:NavigationList items="{path: '/sideNavigation', templateShareable:false}">
-							<tnt:NavigationListItem text="{path:'title', templateShareable:false}" icon="{path:'icon', templateShareable:false}"
-								expanded="{path:'expanded', templateShareable:false}" items="{path:'items', templateShareable:false}"
-								key="{path:'key', templateShareable:false}">
-								<tnt:NavigationListItem text="{path:'title', templateShareable:false}" icon="{path:'icon', templateShareable:false}"
-									key="{path:'key', templateShareable:false}"></tnt:NavigationListItem>
+							<tnt:NavigationListItem text="{path:'title', templateShareable:false}" icon="{path:'icon', templateShareable:false}" expanded="{path:'expanded', templateShareable:false}" items="{path:'items', templateShareable:false}" key="{path:'key', templateShareable:false}">
+								<tnt:NavigationListItem text="{path:'title', templateShareable:false}" icon="{path:'icon', templateShareable:false}" key="{path:'key', templateShareable:false}"></tnt:NavigationListItem>
 							</tnt:NavigationListItem>
 						</tnt:NavigationList>
 						<tnt:fixedItem>
@@ -44,6 +55,8 @@
 						</tnt:fixedItem>
 					</tnt:SideNavigation>
 				</tnt:sideContent>
+				<!--Ending SideContent-->
+				<!--Starting MainContent-->
 				<tnt:mainContents>
 					<NavContainer id="NavContainer">
 						<SplitContainer id="UnifiedSplitContainer" mode="HideMode">
@@ -52,13 +65,17 @@
 						</SplitContainer>
 					</NavContainer>
 				</tnt:mainContents>
+				<!--Ending MainContent-->
 			</tnt:ToolPage>
+			<!--Ending Toolpage-->
 		</content>
+		<!--Starting Footer-->
 		<footer>
 			<OverflowToolbar>
 				<ToolbarSpacer/>
 				<Text text="Powered By Inflexion"/>
 			</OverflowToolbar>
 		</footer>
+		<!--Ending Footer-->
 	</Page>
 </mvc:View>

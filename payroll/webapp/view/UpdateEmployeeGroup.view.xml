@@ -1,29 +1,41 @@
-<mvc:View controllerName="com.app.payroll.controller.UpdateEmployeeGroup" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+<!--UpdateEmployeeGroup is used to update the existing details from the Employee Group Details-->
+<mvc:View controllerName="com.app.payroll.controller.UpdateEmployeeGroup" 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" 
+	xmlns="sap.m" 
+	xmlns:f="sap.ui.layout.form">
 	<Page title="Update Employee Group Type" showNavButton="true" navButtonPress="onPressNavBack">
 		<content>
-			<f:SimpleForm class="sapUiLargeMarginBegin" editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3"
-				labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
-				singleContainerFullSize="false">
+			<!--Starting SimpleForm-->
+			<f:SimpleForm class="sapUiLargeMarginBegin" editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+				<!--Employee Group Name-->
 				<Label text="Employee Group Name" required="true"/>
 				<Input/>
+				<!--Group Type-->
 				<Label text="Group Type" required="true"/>
 				<ComboBox items="{ path: '/Grouptype' }">
 					<core:Item key="{key}" text="{text}"/>
 				</ComboBox>
+				<!--Group Code-->
 				<Label text="Group Code" required="true"/>
 				<Input/>
+				<!--Status-->
 				<Label text="Status" required="true"/>
 				<ComboBox items="{ path: '/Grouptype' }">
-					<core:Item key="{key}" text="{text}"/> 
+					<core:Item key="{key}" text="{text}"/>
 				</ComboBox>
-				<Label text="Description"/><Input/>
+				<!--Discription-->
+				<Label text="Description"/>
+				<Input/>
 			</f:SimpleForm>
+			<!--Ending SimpleForm-->
+			<!--Starting FlexBox-->
 			<FlexBox justifyContent="Center" alignItems="Center" class="sapUiMediumMarginTop">
 				<items>
 					<Button text="Update" type="Ghost" press="onPress" tooltip="UpdateEmployeeGroup" width="100%" icon="sap-icon://save" iconFirst="true"/>
 				</items>
 			</FlexBox>
+			<!--Ending FlexBox-->
 		</content>
 	</Page>
 </mvc:View>

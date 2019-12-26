@@ -1,12 +1,19 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.app.payroll.controller.WageMaster"
-	displayBlock="true" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+<!--WageMaster view is a Master view, its used to showing the type of Salary Wages-->
+<mvc:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" controllerName="com.app.payroll.controller.WageMaster" displayBlock="true" 
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	xmlns:l="sap.ui.layout" 
+	xmlns:f="sap.ui.layout.form">
 	<Page title="Wage Type Master" showNavButton="true" navButtonPress="onPressNavBack">
-	<subHeader>
+		<subHeader>
 			<Toolbar>
+				<!--SearchField-->
 				<SearchField id="wageTypeSearchField" search="onSearchWageType" placeholder="Please Enter Your Choice"/>
 			</Toolbar>
 		</subHeader>
 		<content>
+			<!--Starting WageType List-->
 			<List id="wageTypeList" items="{path:'/wageTypes'}" growing="true" growingThreshold="10" noDataText="No Data">
 				<ObjectListItem title="{wageType}" type="Active" press="onListItemPress">
 					<secondStatus>
@@ -17,11 +24,13 @@
 					</attributes>
 				</ObjectListItem>
 			</List>
-		
+			<!--Ending WageType List-->
 		</content>
+		<!--Starting Footer-->
 		<footer>
 			<Toolbar>
 				<ToolbarSpacer/>
+				<!--Filter Button-->
 				<OverflowToolbarButton tooltip="Filter" icon="sap-icon://add-filter" press="onPressFilterSeasons">
 					<customData>
 						<core:CustomData key="multi" value="true"/>
@@ -30,5 +39,6 @@
 				</OverflowToolbarButton>
 			</Toolbar>
 		</footer>
+		<!--Ending Footer-->
 	</Page>
 </mvc:View>
