@@ -9,8 +9,9 @@ sap.ui.define([
 	"sap/m/Text",
 	"sap/m/MessageItem",
 	"sap/m/Link",
-	"sap/m/MessagePopover"
-], function (BaseController, JSONModel, Fragment, MessageToast, Button, Dialog, ButtonType, Text, MessageItem, Link, MessagePopover) {
+	"sap/m/MessagePopover",
+	"sap/ui/core/Popup"
+], function (BaseController, JSONModel, Fragment, MessageToast, Button, Dialog, ButtonType, Text, MessageItem, Link, MessagePopover, Popup) {
 	"use strict";
 	return BaseController.extend("com.app.payroll.controller.UnifiedSplitContainer", {
 		onInit: function () {
@@ -112,10 +113,10 @@ sap.ui.define([
 				}).then(function (oPopover) {
 					this._oPopover = oPopover;
 					this.getView().addDependent(this._oPopover);
-					this._oPopover.openBy(oButton);
+					this._oPopover.open(this._bKeyboard, oButton, Popup.Dock.BeginTop, Popup.Dock.BeginBottom, oButton);
 				}.bind(this));
 			} else {
-				this._oPopover.openBy(oButton);
+				this._oPopover.open(this._bKeyboard, oButton, Popup.Dock.BeginTop, Popup.Dock.BeginBottom, oButton);
 			}
 		},
 		handleCloseButton: function (oEvent) {

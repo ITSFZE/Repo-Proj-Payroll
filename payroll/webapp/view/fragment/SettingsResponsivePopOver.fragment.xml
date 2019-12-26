@@ -1,12 +1,28 @@
 <core:FragmentDefinition
 	xmlns="sap.m"
-	xmlns:core="sap.ui.core">
-	<ResponsivePopover
-		title="Settings"
-		class="sapUiPopupWithPadding"
-		placement="Top">
-		<content>
+	xmlns:core="sap.ui.core"
+	xmlns:u="sap.ui.unified">
+
+	<!--Start from Settings Popover Menu from SideNavigation-->
+	<u:Menu
+			itemSelect="handleMenuItemPress">
+		<u:MenuItem
+				text="EditProfile"
+				icon="sap-icon://key-user-settings"/>
+		<u:MenuItem
+				text="ChangePassword" icon="sap-icon://locked"/>
+		<u:MenuItem
+				text="ChangeLanguage" icon="sap-icon://text-color">
+
+			<!--Start from Language Popup Menu-->
+			<u:Menu>
+				<u:MenuItem  text="English" />
+				<u:MenuItem  text="Arabic" />
+				<u:MenuItem  text="Spanish" />
+				<u:MenuItem  text="Chinese" />
+			</u:Menu>
+			<!--Language Menu End-->
 			
-		</content>
-	</ResponsivePopover>
+		</u:MenuItem>
+	</u:Menu>
 </core:FragmentDefinition>
