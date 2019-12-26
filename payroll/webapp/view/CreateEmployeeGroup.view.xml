@@ -1,29 +1,49 @@
-<mvc:View controllerName="com.app.payroll.controller.CreateEmployeeGroup" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+<!--CreateEmployeeGroup view is used to create a employee group from Employee Group Master view-->
+<mvc:View controllerName="com.app.payroll.controller.CreateEmployeeGroup" 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" 
+	xmlns="sap.m" 
+	xmlns:f="sap.ui.layout.form">
 	<Page title="Create Employee Group " showNavButton="true" navButtonPress="onPressNavBack">
 		<content>
-			<f:SimpleForm class="sapUiLargeMarginBegin" editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3"
-				labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
-				singleContainerFullSize="false" id="employee">
+
+			<!--Starting Simple Form-->
+			<f:SimpleForm class="sapUiLargeMarginBegin" editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" id="employee">
+
+				<!--Employee Group Name-->
 				<Label text="Employee Group Name" required="true"/>
 				<Input/>
+
+				<!--Employee Group Type-->
 				<Label text="Group Type" required="true"/>
 				<ComboBox items="{ path: 'employee>Grouptype' }">
 					<core:Item key="{key}" text="{text}"/>
 				</ComboBox>
+
+				<!--Group Code-->
 				<Label text="Group Code"/>
 				<Input/>
+
+				<!--Status-->
 				<Label text="Status" required="true"/>
-				<ComboBox items="{ path: 'employee>Status' }"> 
+				<ComboBox items="{ path: 'employee>Status' }">
 					<core:Item key="{key}" text="{text}"/>
 				</ComboBox>
-				<Label text="Description" required="true"/><Input/>
+
+				<!--Description-->
+				<Label text="Description" required="true"/>
+				<Input/>
 			</f:SimpleForm>
+			<!--Ending Simple Form-->
+
+			<!--Starting FlexBox used to Create Button-->
 			<FlexBox justifyContent="Center" alignItems="Center" class="sapUiMediumMarginTop">
 				<items>
 					<Button text="Create" type="Ghost" press="onPress" tooltip="CreateEmployeeGroup" width="100%" icon="sap-icon://save" iconFirst="true"/>
 				</items>
 			</FlexBox>
+			<!--Ending FlexBox-->
+
 		</content>
 	</Page>
 </mvc:View>
