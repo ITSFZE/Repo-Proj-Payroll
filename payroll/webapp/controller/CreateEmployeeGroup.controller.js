@@ -6,6 +6,7 @@ sap.ui.define([
 	"use strict";
 
 	return BaseController.extend("com.app.payroll.controller.CreateEmployeeGroup", {
+		//Init Function is used to initiate the methods and properties at opening time of file
 		onInit: function () {
 			var oRouter = this.getRouter();
 			oRouter.getRoute("CreateEmployeeGroup").attachMatched(this._onRouteMatched, this);
@@ -13,6 +14,7 @@ sap.ui.define([
 			var oModel = new JSONModel("/EmployeeDetail.json");
 			this.getView().setModel(oModel);
 		},
+		//Navigate Function is used to navigate from CreateEmployeeGroup to EmployeeGroup
 		onPressNavBack: function () {
 			this.getRouter().navTo("EmployeeGroup");
 		}

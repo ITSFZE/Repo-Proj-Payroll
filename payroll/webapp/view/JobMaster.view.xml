@@ -1,5 +1,9 @@
-<mvc:View controllerName="com.app.payroll.controller.JobMaster" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
-	xmlns:c="sap.ui.core" xmlns:f="sap.ui.layout.form">
+<!--JobMaster view is used show the details wrt JobName-->
+	<mvc:View controllerName="com.app.payroll.controller.JobMaster" 
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" 
+	xmlns="sap.m" 
+	xmlns:c="sap.ui.core" 
+	xmlns:f="sap.ui.layout.form">
 	<Page enableScrolling="true" title="Job Master" showNavButton="true" navButtonPress="onPressNavBack">
 		<content>
 			<VBox fitContainer="true">
@@ -7,6 +11,7 @@
 					<headerToolbar>
 						<OverflowToolbar>
 							<content>
+							    <!--Job Master List-->
 								<Title text="Job Master List" titleStyle="Auto"/>
 								<ToolbarSpacer/>
 								<SearchField width="25%" class="sapUiSmallMarginEnd"/>
@@ -15,20 +20,27 @@
 						</OverflowToolbar>
 					</headerToolbar>
 					<columns>
+					    <!--Job Name-->
 						<Column width="11em" hAlign="Begin">
 							<Text text="Job Name"/>
 						</Column>
+						<!--Number of Positions-->
 						<Column width="11em" hAlign="Center">
 							<Text text="No. of Positions"/>
 						</Column>
+						<!--Created Date-->
 						<Column width="11em" hAlign="Center">
 							<Text text="Created Date"/>
 						</Column>
+						<!--Modified Date-->
 						<Column width="11em" hAlign="Center">
 							<Text text="Modified Date"/>
 						</Column>
+						<!--Edit Job Button-->
 						<Column width="1.4em" hAlign="End"></Column>
+						<!--Manage Positions Button-->
 						<Column width="1.4em" hAlign="Center"></Column>
+						<!--Add Position Button-->
 						<Column width="3em" hAlign="Begin"></Column>
 					</columns>
 					<items>

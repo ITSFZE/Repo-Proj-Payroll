@@ -17,7 +17,7 @@
 			<!-- Starting IconTabBar have two IconTabFilters are Roles/Responsiblities and Salary Struture -->
 			<IconTabBar>
 				<items>
-					<!-- Roles/Responblities -->
+					<!-- Roles or Responblities -->
 					<IconTabFilter text="Roles/Responsiblities">
 						<Table alternateRowColors="true">
 							<headerToolbar>

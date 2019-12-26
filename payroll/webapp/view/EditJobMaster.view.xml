@@ -1,22 +1,30 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns="sap.m"
-	displayBlock="true" controllerName="com.app.payroll.controller.EditJobMaster" xmlns:html="http://www.w3.org/1999/xhtml">
+<!--EditJobMaster view is used for edit the job details wrt JobName from JobMaster view -->
+<mvc:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:f="sap.ui.layout.form" 
+	xmlns:l="sap.ui.layout" 
+	xmlns="sap.m" displayBlock="true" controllerName="com.app.payroll.controller.EditJobMaster" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="Edit Job Master" showNavButton="true" navButtonPress="onPressNavBack" titleAlignment="Center">
 		<content>
-			<f:SimpleForm class="sapUiLargeMarginBegin" editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3"
-				labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
-				singleContainerFullSize="false">
+			<!--SimpleForm Started-->
+			<f:SimpleForm class="sapUiLargeMarginBegin" editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
 				<Label text="Job Name" required="true"/>
 				<Input/>
 			</f:SimpleForm>
+			<!--SimpleForm Ended-->
 			<IconTabBar>
 				<items>
+					<!--IconTabFilter Started for Roles/Responsibilities-->
 					<IconTabFilter text="Roles/Responsiblities">
 						<Table alternateRowColors="true">
 							<headerToolbar>
 								<Toolbar>
 									<content>
+										<!--Responsibilities-->
 										<Label text="Roles/Responsiblities" design="Bold" required="true"/>
 										<ToolbarSpacer/>
+										<!--Add Button-->
 										<Button icon="sap-icon://add" iconFirst="true" type="Ghost"/>
 									</content>
 								</Toolbar>
@@ -28,6 +36,7 @@
 							<items>
 								<ColumnListItem>
 									<cells>
+										<!--CheckBox-->
 										<CheckBox/>
 										<Input/>
 									</cells>
@@ -35,13 +44,17 @@
 							</items>
 						</Table>
 					</IconTabFilter>
+					<!--IconTabFilter Ended for Roles/Responsibilities-->
+					<!--IconTabFilter Started for Salary Structure-->
 					<IconTabFilter text="Salary Structure">
 						<Table items="{JobMaster>/JobMaster}" popinLayout="GridSmall" alternateRowColors="true">
 							<headerToolbar>
 								<Toolbar>
 									<content>
+										<!--Salary Structure-->
 										<Label text="Salary Structure" design="Bold"/>
 										<ToolbarSpacer/>
+										<!--Add Button-->
 										<Button icon="sap-icon://add" iconFirst="true" type="Ghost"/>
 									</content>
 								</Toolbar>
@@ -50,18 +63,23 @@
 								<Column width="3%" demandPopin="true">
 									<CheckBox></CheckBox>
 								</Column>
+								<!--Wage Type-->
 								<Column width="20%" hAlign="Center" demandPopin="true">
 									<Text text="Wage Type"/>
 								</Column>
+								<!--Amount Type-->
 								<Column width="20%" hAlign="Center" demandPopin="true">
 									<Text text="Amount Type"/>
 								</Column>
+								<!--Percentage-->
 								<Column width="15%" hAlign="Center" demandPopin="true">
 									<Text text="Percentage(%)"/>
 								</Column>
+								<!--Base Wage Type-->
 								<Column width="15%" hAlign="Center" demandPopin="true">
 									<Text text="Base Wage Type"/>
 								</Column>
+								<!--Amount-->
 								<Column width="15%" hAlign="Center" demandPopin="true">
 									<Text text="Amount"/>
 								</Column>
@@ -80,10 +98,12 @@
 							</items>
 						</Table>
 					</IconTabFilter>
+					<!--IconTabFilter Ended for Salary Structure-->
 				</items>
 			</IconTabBar>
 			<FlexBox justifyContent="Center" alignItems="Center" class="sapUiMediumMarginTop">
 				<items>
+					<!--Submit Button-->
 					<Button text="Submit" type="Ghost" press="onPress" tooltip="Submit" width="100%" icon="sap-icon://save" iconFirst="true"/>
 				</items>
 			</FlexBox>

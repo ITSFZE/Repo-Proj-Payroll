@@ -1,11 +1,19 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:semantic="sap.m.semantic"
-	xmlns:c="sap.suite.ui.microchart" xmlns:l="sap.ui.layout" displayBlock="true" xmlns:html="http://www.w3.org/1999/xhtml"
+<!--Dashboard view is used for created Menu and Master -->
+<mvc:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	xmlns:tnt="sap.tnt" 
+	xmlns:semantic="sap.m.semantic" 
+	xmlns:c="sap.suite.ui.microchart" 
+	xmlns:l="sap.ui.layout" displayBlock="true" 
+	xmlns:html="http://www.w3.org/1999/xhtml" 
 	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" controllerName="com.app.payroll.controller.Dashboard">
 	<Page showHeader="false">
 		<content>
 			<tnt:ToolPage id="toolPage" sideExpanded="false">
 				<tnt:header>
 					<tnt:ToolHeader>
+						<!--Menu Button-->
 						<Button icon="sap-icon://menu2" tooltip="Menu" type="Transparent" press="handleMenuPress">
 							<layoutData>
 								<OverflowToolbarLayoutData priority="NeverOverflow"/>
@@ -14,12 +22,14 @@
 						<ToolbarSpacer/>
 						<Text text="HOME"/>
 						<ToolbarSpacer/>
+						<!--User Profile-->
 						<Button id="userQuickView" type="Emphasized" tooltip="User Profile" icon="sap-icon://customer" press="onPressUserQuickView">
 							<layoutData>
 								<OverflowToolbarLayoutData priority="NeverOverflow"/>
 								<FlexItemData growFactor="1"/>
 							</layoutData>
 						</Button>
+						<!--Logout-->
 						<Button id="logoutBtn" type="Negative" tooltip="Logout" icon="sap-icon://log" press="onPressLogout">
 							<layoutData>
 								<OverflowToolbarLayoutData priority="NeverOverflow"/>
@@ -30,11 +40,8 @@
 				<tnt:sideContent>
 					<tnt:SideNavigation expanded="false" itemSelect="onItemSelect">
 						<tnt:NavigationList items="{path: '/sideNavigation', templateShareable:false}">
-							<tnt:NavigationListItem text="{path:'title', templateShareable:false}" icon="{path:'icon', templateShareable:false}"
-								expanded="{path:'expanded', templateShareable:false}" items="{path:'items', templateShareable:false}"
-								key="{path:'key', templateShareable:false}">
-								<tnt:NavigationListItem text="{path:'title', templateShareable:false}" icon="{path:'icon', templateShareable:false}"
-									key="{path:'key', templateShareable:false}"></tnt:NavigationListItem>
+							<tnt:NavigationListItem text="{path:'title', templateShareable:false}" icon="{path:'icon', templateShareable:false}" expanded="{path:'expanded', templateShareable:false}" items="{path:'items', templateShareable:false}" key="{path:'key', templateShareable:false}">
+								<tnt:NavigationListItem text="{path:'title', templateShareable:false}" icon="{path:'icon', templateShareable:false}" key="{path:'key', templateShareable:false}"></tnt:NavigationListItem>
 							</tnt:NavigationListItem>
 						</tnt:NavigationList>
 						<tnt:fixedItem>
@@ -51,8 +58,8 @@
 								<l:BlockLayout id="dashBLayout">
 									<l:BlockLayoutRow>
 										<l:BlockLayoutCell title="Masters">
-											<GenericTile id="genericTileJobMaster" class="sapUiTinyMarginBegin sapUiTinyMarginTop" sizeBehavior="Small" header="Job Master" app:route="JobMaster"
-												press="onTilePress">
+                                            <!--Icon for JobMaster Tile-->
+											<GenericTile id="genericTileJobMaster" class="sapUiTinyMarginBegin sapUiTinyMarginTop" sizeBehavior="Small" header="Job Master" app:route="JobMaster" press="onTilePress">
 												<tileContent>
 													<TileContent>
 														<content>
@@ -61,8 +68,8 @@
 													</TileContent>
 												</tileContent>
 											</GenericTile>
-											<GenericTile id="genericTileWageMaster" class="sapUiTinyMarginBegin sapUiTinyMarginTop" sizeBehavior="Small" header="Wage Master"
-												app:route="WageMaster" press="onTilePress">
+											<!--Icon for WageMaster Tile-->
+											<GenericTile id="genericTileWageMaster" class="sapUiTinyMarginBegin sapUiTinyMarginTop" sizeBehavior="Small" header="Wage Master" app:route="WageMaster" press="onTilePress">
 												<tileContent>
 													<TileContent>
 														<content>
@@ -71,11 +78,12 @@
 													</TileContent>
 												</tileContent>
 											</GenericTile>
-											<GenericTile id="genericTileEmpGroups" class="sapUiTinyMarginBegin sapUiTinyMarginTop" sizeBehavior="Small" header="Employee Groups"
-												app:route="EmployeeGroup" press="onTilePress">
+											<!--Icon for EmployeeMaster Tile-->
+											<GenericTile id="genericTileEmpGroups" class="sapUiTinyMarginBegin sapUiTinyMarginTop" sizeBehavior="Small" header="Employee Groups" app:route="EmployeeGroup" press="onTilePress">
 												<tileContent>
 													<TileContent>
 														<content>
+															<!--Icon for -->
 															<ImageContent src="sap-icon://group"/>
 														</content>
 													</TileContent>
