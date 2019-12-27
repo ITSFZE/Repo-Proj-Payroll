@@ -8,27 +8,23 @@
 	<Page title="Payroll Login" showHeader="false" class="custom-page">
 		<l:BlockLayout>
 			<l:BlockLayoutRow>
-				<l:BlockLayoutCell width="2">
+				<l:BlockLayoutCell width="3">
 					<!--Background Image-->
 					<VBox>
 						<Image src="./images/Inflexion.png"/>
 					</VBox>
 				</l:BlockLayoutCell>
-				<l:BlockLayoutCell width="1">
-					<!--SimpleForm Started-->
-					<f:SimpleForm layout="ResponsiveGridLayout" class="sapUiLargeMarginTop custom-sform-style">
-						<!--UserName-->
-						<Label text="Username" design="Bold" class="common" required="true"/>
+				<l:BlockLayoutCell width="1" class="sapUiLargeMarginTop">
+					<!--UserName-->
+						<Label text="Username :" design="Bold" class="common" required="true"/>
 						<Input/>
 						<!--Password-->
-						<Label text="Password" design="Bold" class="common" required="true"/>
+						<Label text="Password :" design="Bold" class="common" required="true"/>
 						<Input/>
 						<!--Login-->
-						<Button text="Login" tooltip="Login" type="Accept" press="onPressLogin"/>
+						<Button text="Login" tooltip="Login" type="Accept" press="onPressLogin"  width="100%"/>
 						<!--ForgotPassword-->
-						<Button type="Reject" tooltip="Forgot Password" text="Forget Password ?"/>
-					</f:SimpleForm>
-					<!--SimpleForm Ended-->
+						<Button type="Reject" tooltip="Forgot Password" text="Forget Password ?"  width="100%"/>
 				</l:BlockLayoutCell>
 			</l:BlockLayoutRow>
 		</l:BlockLayout>
