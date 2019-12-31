@@ -14,17 +14,17 @@
 						<Image src="./images/Inflexion.png"/>
 					</VBox>
 				</l:BlockLayoutCell>
-				<l:BlockLayoutCell width="1" class="sapUiLargeMarginTop">
+				<l:BlockLayoutCell width="1" class="sapUiLargeMarginTop custom-tablet-style">
 					<!--UserName-->
-						<Label text="Username :" design="Bold" class="common" required="true"/>
-						<Input/>
-						<!--Password-->
-						<Label text="Password :" design="Bold" class="common" required="true"/>
-						<Input/>
-						<!--Login-->
-						<Button text="Login" tooltip="Login" type="Accept" press="onPressLogin"  width="100%"/>
-						<!--ForgotPassword-->
-						<Button type="Reject" tooltip="Forgot Password" text="Forget Password ?"  width="100%"/>
+					<Label text="Username :" design="Bold" class="common" required="true"/>
+					<Input/>
+					<!--Password-->
+					<Label text="Password :" design="Bold" class="common" required="true"/>
+					<Input/>
+					<!--Login-->
+					<Button text="Login" tooltip="Login" type="Accept" press="onPressLogin" width="100%"/>
+					<!--ForgotPassword-->
+					<Button type="Reject" tooltip="Forgot Password" text="Forget Password ?" width="100%"/>
 				</l:BlockLayoutCell>
 			</l:BlockLayoutRow>
 		</l:BlockLayout>
