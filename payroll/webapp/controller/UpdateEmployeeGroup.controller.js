@@ -11,7 +11,7 @@ sap.ui.define([
 			oRouter.getRoute("UpdateEmployeeGroup").attachMatched(this._onRouteMatched, this);
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 		},
-		//its navigating back to EmployeeGroup Master
+		//This is navigating back to EmployeeGroup Master
 		onPressNavBack: function () {
 			this.getRouter().navTo("EmployeeGroup");
 		}

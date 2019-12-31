@@ -91,7 +91,7 @@ sap.ui.define([
 				content: new Text({
 					text: "Are you sure you want to logout?"
 				}),
-				//sign-out button
+				//Sign-out button
 				beginButton: new Button({
 					type: ButtonType.Emphasized,
 					text: "Sign-Out",
@@ -100,7 +100,7 @@ sap.ui.define([
 						that.getRouter().navTo("Login");
 					}
 				}),
-				//end button
+				//End button
 				endButton: new Button({
 					text: "Cancel",
 					press: function () {
@@ -116,7 +116,7 @@ sap.ui.define([
 			jQuery.sap.syncStyleClass("sapUiSizeCompact", this.getView(), oDialog);
 			oDialog.open();
 		},
-		//its creating the popover event of setting menu
+		//This is creating the popover event of setting menu
 		handleRespPopoverSettingsPress: function (oEvent) {
 			var oButton = oEvent.getSource();
 			//if-else statment
@@ -133,11 +133,11 @@ sap.ui.define([
 				this._oPopover.open(this._bKeyboard, oButton, Popup.Dock.BeginTop, Popup.Dock.BeginBottom, oButton);
 			}
 		},
-		//its closing the setting popover menu
+		//This is closing the setting popover menu
 		handleCloseButton: function (oEvent) {
 			this._oPopover.close();
 		},
-		//its navigating the Master views
+		//This is navigating the Master views
 		onItemSelect: function (oEvent) {
 			var that = this;
 			var viewId = this.getView().getId();

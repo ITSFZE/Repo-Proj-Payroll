@@ -18,7 +18,7 @@ sap.ui.define([
 		_onRouteMatched: function() {
 
 		},
-		//its doing press event to navigate the item details and edit view
+		//This is doing press event to navigate the item details and edit view
 		onListItemPress: function (oEvent) {
 			if(oEvent.getSource().oBindingContexts.undefined){
 				if(oEvent.getSource().oBindingContexts.undefined.getObject()){
@@ -34,7 +34,7 @@ sap.ui.define([
 				// Error
 			}
 		},
-		//its navigating back to Home page
+		//This is navigating back to Home page
 		onPressNavBack: function () {
 			this.getRouter().navTo("Dashboard");
 		}

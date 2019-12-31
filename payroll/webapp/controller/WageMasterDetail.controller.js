@@ -13,13 +13,13 @@ sap.ui.define([
 			oRouter.getRoute("EditWageMasterDetail").attachMatched(this._onEditRouteMatched, this);
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 		},
-		//its Set the model on matched routing create view
+		//This is  Set the model on matched routing create view
 		_onCreateRouteMatched: function(){
 			var ddModel = new JSONModel({});
 			this.getView().setModel(ddModel,"EditWageMasterDetail");
 		
 		},
-		//its Set the model on matched routing edit view
+		//This is Set the model on matched routing edit view
 		_onEditRouteMatched: function(evt){
 
 			var getPars = evt.getParameters().arguments;
