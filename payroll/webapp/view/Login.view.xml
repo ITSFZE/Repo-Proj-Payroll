@@ -6,25 +6,26 @@
 	xmlns:l="sap.ui.layout" controllerName="com.app.payroll.controller.Login" 
 	xmlns:f="sap.ui.layout.form" displayBlock="true">
 	<Page title="Payroll Login" showHeader="false" class="custom-page">
+		<VBox>
+			<Image src="./images/Inflexion.png"/>
+		</VBox>
 		<l:BlockLayout>
 			<l:BlockLayoutRow>
-				<l:BlockLayoutCell width="3">
-					<!--Background Image-->
-					<VBox>
-						<Image src="./images/Inflexion.png"/>
-					</VBox>
-				</l:BlockLayoutCell>
-				<l:BlockLayoutCell width="1" class="sapUiLargeMarginTop custom-tablet-style">
-					<!--UserName-->
-					<Label text="Username :" design="Bold" class="common" required="true"/>
-					<Input/>
-					<!--Password-->
-					<Label text="Password :" design="Bold" class="common" required="true"/>
-					<Input/>
-					<!--Login-->
-					<Button text="Login" tooltip="Login" type="Accept" press="onPressLogin" width="100%"/>
-					<!--ForgotPassword-->
-					<Button type="Reject" tooltip="Forgot Password" text="Forget Password ?" width="100%"/>
+				<l:BlockLayoutCell class="sapUiLargeMarginTop custom-tablet-style">
+					<FlexBox  class="custom-fBox-style" alignContent="Center" direction="Column">
+						<items>
+							<!--UserName-->
+							<Label text="Username :" design="Bold" class="common" required="true"/>
+							<Input/>
+							<!--Password-->
+							<Label text="Password :" design="Bold" class="common" required="true"/>
+							<Input/>
+							<!--Login-->
+							<Button text="Login" tooltip="Login" type="Accept" press="onPressLogin" width="100%"/>
+							<!--ForgotPassword-->
+							<Button type="Reject" tooltip="Forgot Password" text="Forget Password ?" width="100%"/>
+						</items>
+					</FlexBox>
 				</l:BlockLayoutCell>
 			</l:BlockLayoutRow>
 		</l:BlockLayout>

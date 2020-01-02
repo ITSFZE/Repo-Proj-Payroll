@@ -1,5 +1,5 @@
 <!--JobMaster view is used show the details wrt JobName-->
-	<mvc:View controllerName="com.app.payroll.controller.JobMaster" 
+<mvc:View controllerName="com.app.payroll.controller.JobMaster" 
 	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" 
 	xmlns="sap.m" 
 	xmlns:c="sap.ui.core" 
@@ -7,11 +7,11 @@
 	<Page enableScrolling="true" title="Job Master" showNavButton="true" navButtonPress="onPressNavBack">
 		<content>
 			<VBox fitContainer="true">
-				<Table items="" popinLayout="GridLarge" alternateRowColors="true">
+				<Table items="{/JobMaster}" popinLayout="GridLarge" alternateRowColors="true">
 					<headerToolbar>
 						<OverflowToolbar>
 							<content>
-							    <!--Job Master List-->
+								<!--Job Master List-->
 								<Title text="Job Master List" titleStyle="Auto"/>
 								<ToolbarSpacer/>
 								<SearchField width="25%" class="sapUiSmallMarginEnd"/>
@@ -20,39 +20,39 @@
 						</OverflowToolbar>
 					</headerToolbar>
 					<columns>
-					    <!--Job Name-->
+						<!--Job Name-->
 						<Column width="11em" hAlign="Begin">
 							<Text text="Job Name"/>
 						</Column>
 						<!--Number of Positions-->
-						<Column width="11em" hAlign="Center">
+						<Column width="11em" hAlign="Center" demandPopin="true" minScreenWidth="Tablet">
 							<Text text="No. of Positions"/>
 						</Column>
 						<!--Created Date-->
-						<Column width="11em" hAlign="Center">
+						<Column width="11em" hAlign="Center" demandPopin="true" minScreenWidth="Tablet">
 							<Text text="Created Date"/>
 						</Column>
 						<!--Modified Date-->
-						<Column width="11em" hAlign="Center">
+						<Column width="11em" hAlign="Center" demandPopin="true" minScreenWidth="Tablet">
 							<Text text="Modified Date"/>
 						</Column>
 						<!--Edit Job Button-->
-						<Column width="1.4em" hAlign="End"></Column>
+						<Column width="1.5em" hAlign="Begin"></Column>
 						<!--Manage Positions Button-->
-						<Column width="1.4em" hAlign="Center"></Column>
+						<Column width="1.5em" hAlign="Begin"></Column>
 						<!--Add Position Button-->
 						<Column width="3em" hAlign="Begin"></Column>
 					</columns>
 					<items>
 						<ColumnListItem>
 							<cells>
-								<Text text="Software"/>
-								<Text text="5"/>
-								<Text text="12/07/2018"/>
-								<Text text="12/07/2019"/>
-								<Button icon="sap-icon://edit" press="onPressEditJobMaster" tooltip="Edit Job"/>
-								<Button icon="sap-icon://employee" tooltip="Manage Position"/>
-								<Button icon="sap-icon://add-employee" tooltip="Add Position"/>
+								<Text text="{name}"/>
+								<Text text="{position}"/>
+								<Text text="{cDate}"/>
+								<Text text="{mDate}"/>
+								<Button icon="sap-icon://edit" press="onPressEditJobMaster" iconDensityAware="true" tooltip="Edit Job"/>
+								<Button icon="sap-icon://employee" iconDensityAware="true" tooltip="Manage Position"/>
+								<Button icon="sap-icon://add-employee" iconDensityAware="true" tooltip="Add Position"/>
 							</cells>
 						</ColumnListItem>
 					</items>

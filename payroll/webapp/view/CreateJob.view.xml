@@ -15,7 +15,7 @@
 			</f:SimpleForm>
 			<!-- Ending Simple Form -->
 			<!-- Starting IconTabBar have two IconTabFilters are Roles/Responsiblities and Salary Struture -->
-			<IconTabBar>
+			<IconTabBar tabDensityMode="Cozy">
 				<items>
 					<!-- Roles or Responblities -->
 					<IconTabFilter text="Roles/Responsiblities">
@@ -47,7 +47,7 @@
 					</IconTabFilter>
 					<!-- Salary Structure -->
 					<IconTabFilter text="Salary Structure">
-						<Table items="{JobMaster>/JobMaster}" popinLayout="GridSmall" alternateRowColors="true" backgroundDesign="Translucent">
+						<Table items="{JobMaster>/JobMaster}" popinLayout="Block" alternateRowColors="true" backgroundDesign="Translucent" mode="MultiSelect" inset="false">
 							<headerToolbar>
 								<Toolbar>
 									<content>
@@ -58,31 +58,26 @@
 								</Toolbar>
 							</headerToolbar>
 							<columns>
-								<Column width="3%" demandPopin="true">
-									<CheckBox>
-									</CheckBox>
+								<Column width="12em">
+									<Text text="Product" />
 								</Column>
-								<Column width="20%" hAlign="Center" demandPopin="true">
-									<Text text="Wage Type" />
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text="Supplier" />
 								</Column>
-								<Column width="20%" hAlign="Center" demandPopin="true">
-									<Text text="Amount Type" />
+								<Column minScreenWidth="Desktop" demandPopin="true" hAlign="End">
+									<Text text="Dimensions" />
 								</Column>
-								<Column width="15%" hAlign="Center" demandPopin="true">
-									<Text text="Percentage(%)" />
+								<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+									<Text text="Weight" />
 								</Column>
-								<Column width="15%" hAlign="Center" demandPopin="true">
-									<Text text="Base Wage Type" />
-								</Column>
-								<Column width="15%" hAlign="Center" demandPopin="true">
-									<Text text="Amount" />
+								<Column hAlign="End">
+									<Text text="Price" />
 								</Column>
 							</columns>
 							<items>
 								<ColumnListItem>
 									<cells>
-										<CheckBox>
-										</CheckBox>
+
 										<Select width="100%" />
 										<Select width="100%" />
 										<Text />

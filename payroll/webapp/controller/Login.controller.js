@@ -7,6 +7,7 @@ sap.ui.define(["com/app/payroll/controller/BaseController"], function (BaseContr
 			var oRouter = this.getRouter();
 			oRouter.attachRouteMatched(this.handleRouteMatched, this);
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
+		 
 		},
 		//This function is validatting the username and password, after navigating to Home page
 		onPressLogin: function () {
@@ -14,4 +15,4 @@ sap.ui.define(["com/app/payroll/controller/BaseController"], function (BaseContr
 		}
 
 	});
-});
+});	
