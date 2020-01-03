@@ -22,7 +22,7 @@
     left: 0;
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 700px) {
     .custom-tablet-style {
         padding: 5%;
     }
@@ -33,7 +33,7 @@
     }
 }
 
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 700px) {
 
     .custom-fBox-style {
         margin: auto;
