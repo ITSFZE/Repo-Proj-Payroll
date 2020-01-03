@@ -7,23 +7,23 @@
 	<Page title="Update Employee Group Type" showNavButton="true" navButtonPress="onPressNavBack">
 		<content>
 			<!--Starting SimpleForm-->
-			<f:SimpleForm class="sapUiLargeMarginBegin" editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+			<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="true" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
 				<!--Employee Group Name-->
 				<Label text="Employee Group Name" required="true"/>
 				<Input/>
 				<!--Group Type-->
 				<Label text="Group Type" required="true"/>
-				<ComboBox items="{ path: '/Grouptype' }">
-					<core:Item key="{key}" text="{text}"/>
-				</ComboBox>
+				<Select items="{path: '/EmployeeGroup'}">
+					<core:Item text="{GroupType}" key="{GroupCode}"/>
+				</Select>
 				<!--Group Code-->
 				<Label text="Group Code" required="true"/>
 				<Input/>
 				<!--Status-->
 				<Label text="Status" required="true"/>
-				<ComboBox items="{ path: '/Grouptype' }">
-					<core:Item key="{key}" text="{text}"/>
-				</ComboBox>
+				<Select items="{path: '/EmployeeGroup'}">
+					<core:Item text="{Status}" key="{GroupCode}"/>
+				</Select>
 				<!--Discription-->
 				<Label text="Description"/>
 				<Input/>

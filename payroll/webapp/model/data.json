@@ -143,5 +143,23 @@
 			"cDate": "10/12/2013",
 			"mDate": "12/01/2019"
 		}
+	],
+	"EmployeeGroup": [
+		{
+			"GroupName": "PMS",
+			"EmployeeCount": "34",
+			"GroupType": "PMS",
+			"GroupCode": "PMS1",
+			"CreatedDate":"31-Jul-2019",
+			"Status": "Active"
+		},
+		{
+			"GroupName": "Paye Disability",
+			"EmployeeCount": "2",
+			"GroupType": "Payroll",
+			"GroupCode": "Paye Disability",
+			"CreatedDate":"30-Jul-2019",
+			"Status": "Inactive"
+		}
 	]
 }
