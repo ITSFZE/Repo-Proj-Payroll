@@ -11,8 +11,6 @@ sap.ui.define([
 			var oRouter = this.getRouter();
 			oRouter.getRoute("CreateEmployeeGroup").attachMatched(this._onRouteMatched, this);
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
-			var oModel = new JSONModel("/EmployeeDetail.json");
-			this.getView().setModel(oModel);
 		},
 		//Navigate Function is used to navigate from CreateEmployeeGroup to EmployeeGroup
 		onPressNavBack: function () {

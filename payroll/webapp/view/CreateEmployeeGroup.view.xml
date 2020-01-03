@@ -8,17 +8,18 @@
 		<content>
 
 			<!--Starting Simple Form-->
-			<f:SimpleForm class="sapUiLargeMarginBegin" editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" id="employee">
+			<f:SimpleForm  editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="true" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false">
 
+			<f:content>
 				<!--Employee Group Name-->
 				<Label text="Employee Group Name" required="true"/>
 				<Input/>
 
 				<!--Employee Group Type-->
 				<Label text="Group Type" required="true"/>
-				<ComboBox items="{ path: 'employee>Grouptype' }">
-					<core:Item key="{key}" text="{text}"/>
-				</ComboBox>
+				<Select items="{path: '/EmployeeGroup'}" >
+					<core:Item text="{GroupType}" key="{GroupCode}"/>
+				</Select>
 
 				<!--Group Code-->
 				<Label text="Group Code"/>
@@ -26,16 +27,17 @@
 
 				<!--Status-->
 				<Label text="Status" required="true"/>
-				<ComboBox items="{ path: 'employee>Status' }">
-					<core:Item key="{key}" text="{text}"/>
-				</ComboBox>
+				<Select items="{path: '/EmployeeGroup'}">
+					<core:Item text="{Status}" key="{GroupCode}"/>
+				</Select>
 
 				<!--Description-->
 				<Label text="Description" required="true"/>
 				<Input/>
+				</f:content>
 			</f:SimpleForm>
 			<!--Ending Simple Form-->
-
+				
 			<!--Starting FlexBox used to Create Button-->
 			<FlexBox justifyContent="Center" alignItems="Center" class="sapUiMediumMarginTop">
 				<items>

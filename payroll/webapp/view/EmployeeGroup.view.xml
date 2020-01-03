@@ -4,61 +4,61 @@
 	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" 
 	xmlns="sap.m">
 	<Page id="page" class="sapUiContentPadding" showNavButton="true" navButtonPress="onPressNavBack" title="Employee Group">
-		<Table alternateRowColors="true" popinLayout="GridLarge" id="employee" headerText="{i18n>group}" class="sapUiResponsiveMargin" width="auto" items="{ path : 'employee>/EmployeeDetail'}">
+		<Table alternateRowColors="true" popinLayout="GridLarge" headerText="{i18n>group}" class="sapUiResponsiveMargin" width="auto" items="{ path : '/EmployeeGroup'}">
 			<headerToolbar>
 				<Toolbar>
 					<content>
 						<!--GroupType-->
 						<Label text="{i18n>group}" design="Bold"/>
 						<!--SearchField-->
-						<SearchField width="30%" search=".onFilterGroupType"/>
+						<SearchField width="30%" search=".onFilterGroupType" class="sapUiSmallMarginEnd"/>
 						<ToolbarSpacer/>
 						<!--Add Button-->
-						<Button type="Ghost" icon="sap-icon://add" tooltip="AddMoreGroupType" press="onPressAdd"/>
+						<Button type="Ghost" class="sapUiMediumMarginEnd" icon="sap-icon://add" tooltip="AddMoreGroupType" press="onPressAdd"/>
 					</content>
 				</Toolbar>
 			</headerToolbar>
 			<columns>
 				<!--Group Name-->
-				<Column demandPopin="true" hAlign="Left">
+				<Column demandPopin="true" hAlign="Left" minScreenWidth="Tablet">
 					<Label text="{i18n>columnGroupName}" design="Bold"/>
 				</Column>
 				<!--Employee Count-->
-				<Column demandPopin="true" hAlign="Center">
+				<Column demandPopin="true" hAlign="Center" minScreenWidth="Tablet">
 					<Label text="{i18n>columnEmployeeCount}" design="Bold"/>
 				</Column>
 				<!--Group Type-->
-				<Column demandPopin="true" hAlign="Left">
+				<Column demandPopin="true" hAlign="Left" minScreenWidth="Tablet">
 					<Label text="{i18n>columnGroupType}" design="Bold"/>
 				</Column>
 				<!--Group Code-->
-				<Column demandPopin="true" hAlign="Left">
+				<Column demandPopin="true" hAlign="Left" minScreenWidth="Tablet">
 					<Label text="{i18n>columnGroupCode}" design="Bold"/>
 				</Column>
 				<!--Created Date-->
-				<Column demandPopin="true" hAlign="Center">
+				<Column demandPopin="true" hAlign="Center" minScreenWidth="Tablet">
 					<Label text="{i18n>columnCreatedDate}" design="Bold"/>
 				</Column>
 				<!--Status-->
-				<Column demandPopin="true" hAlign="Center">
+				<Column demandPopin="true" hAlign="Center" minScreenWidth="Tablet">
 					<Label text="{i18n>columnStatus}" design="Bold"/>
 				</Column>
 				<!--Show Employee Detail Button-->
-				<Column demandPopin="true" width="1.4em" hAlign="Begin"></Column>
+				<Column hAlign="End"></Column>
 				<!--Edit Employee Group Button-->
-				<Column demandPopin="true" width="6em" hAlign="End"></Column>
+				<Column hAlign="Begin" ></Column>
 			</columns>
 			<items>
 				<ColumnListItem>
 					<cells>
-						<ObjectIdentifier title="{employee>GroupName}"/>
-						<ObjectIdentifier title="{employee>EmployeeCount}"/>
-						<ObjectIdentifier title="{employee>GroupType}"/>
-						<ObjectIdentifier title="{employee>GroupCode}"/>
-						<ObjectIdentifier title="{employee>CreatedDate}"/>
-						<ObjectIdentifier title="{employee>Status}"/>
-						<Button type="Ghost" icon="sap-icon://show" tooltip="ShowEmployeeDetail"/>
-						<Button type="Ghost" icon="sap-icon://edit" tooltip="EditEmployeeGroup" press="onPressUpdateEmplyeeGroup"/>
+						<ObjectIdentifier title="{GroupName}"/>
+						<ObjectIdentifier title="{EmployeeCount}"/>
+						<ObjectIdentifier title="{GroupType}"/>
+						<ObjectIdentifier title="{GroupCode}"/>
+						<ObjectIdentifier title="{CreatedDate}"/>
+						<ObjectIdentifier title="{Status}"/>
+						<Button type="Ghost" icon="sap-icon://show" tooltip="ShowEmployeeDetail" iconDensityAware="true"/>
+						<Button type="Ghost" icon="sap-icon://edit" tooltip="EditEmployeeGroup" iconDensityAware="true" press="onPressUpdateEmplyeeGroup"/>
 					</cells>
 				</ColumnListItem>
 			</items>
