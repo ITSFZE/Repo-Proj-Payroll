@@ -6,12 +6,15 @@
 	xmlns:l="sap.ui.layout" controllerName="com.app.payroll.controller.Login" 
 	xmlns:f="sap.ui.layout.form" displayBlock="true">
 	<Page title="Payroll Login" showHeader="false" class="custom-page">
+		<!--Logo Image-->
 		<VBox>
 			<Image src="./images/Inflexion.png"/>
 		</VBox>
+		<!--BlockLayout starting-->
 		<l:BlockLayout>
 			<l:BlockLayoutRow>
 				<l:BlockLayoutCell class="sapUiLargeMarginTop custom-tablet-style">
+					<!--FlexBox Staring with login properties-->
 					<FlexBox  class="custom-fBox-style" alignContent="Center" direction="Column">
 						<items>
 							<!--UserName-->
@@ -26,9 +29,11 @@
 							<Button type="Reject" tooltip="Forgot Password" text="Forget Password ?" width="100%"/>
 						</items>
 					</FlexBox>
+					<!--Ending FlexBox-->
 				</l:BlockLayoutCell>
 			</l:BlockLayoutRow>
 		</l:BlockLayout>
+		<!--Ending BlockLayout-->
 		<Toolbar class="custom-footer-style">
 			<ToolbarSpacer/>
 			<!--Image for SAP Logo-->
