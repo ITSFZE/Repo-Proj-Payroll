@@ -1,112 +1,100 @@
-<!--EditJobMaster view is used for edit the job details wrt JobName from JobMaster view -->
+<!-- "Edit Job" view is used to Create Job details from JobMaster View -->
 <mvc:View xmlns:core="sap.ui.core" 
 	xmlns:mvc="sap.ui.core.mvc" 
 	xmlns:f="sap.ui.layout.form" 
 	xmlns:l="sap.ui.layout" 
 	xmlns="sap.m" displayBlock="true" controllerName="com.app.payroll.controller.EditJobMaster" 
 	xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page title="Edit Job Master" showNavButton="true" navButtonPress="onPressNavBack" titleAlignment="Center">
+	<Page title="Create Job" navButtonPress="onPressNavBack" showNavButton="true" titleAlignment="Center">
 		<content>
-			<!--SimpleForm Started-->
-			<f:SimpleForm class="sapUiLargeMarginBegin" editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
-				<Label text="Job Name" required="true"/>
-				<Input/>
+			<!-- Starting Simple Form -->
+			<f:SimpleForm  editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="true" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false">
+				<!-- Job Name -->
+				<Label text="Job Name" required="true" />
+				<Input />
 			</f:SimpleForm>
-			<!--SimpleForm Ended-->
-			<IconTabBar>
+			<!-- Ending Simple Form -->
+			<!-- Starting IconTabBar have two IconTabFilters are Roles/Responsiblities and Salary Struture -->
+			<IconTabBar tabDensityMode="Cozy">
 				<items>
-					<!--IconTabFilter Started for Roles/Responsibilities-->
+					<!-- Roles or Responblities -->
 					<IconTabFilter text="Roles/Responsiblities">
-						<Table alternateRowColors="true">
+						<Table alternateRowColors="true" mode="MultiSelect" >
 							<headerToolbar>
 								<Toolbar>
 									<content>
-										<!--Responsibilities-->
-										<Label text="Roles/Responsiblities" design="Bold" required="true"/>
-										<ToolbarSpacer/>
-										<!--Add Button-->
-										<Button icon="sap-icon://add" iconFirst="true" type="Ghost"/>
+										<Label text="Roles/Responsiblities" design="Bold" required="true" />
+										<ToolbarSpacer />
+										<Button icon="sap-icon://add" iconFirst="true" type="Ghost" />
 									</content>
 								</Toolbar>
 							</headerToolbar>
 							<columns>
-								<Column width="3%" demandPopin="true"></Column>
-								<Column width="90%" demandPopin="true"></Column>
+								<Column width="90%" demandPopin="true" minScreenWidth="Tablet">
+								</Column>
 							</columns>
 							<items>
 								<ColumnListItem>
 									<cells>
-										<!--CheckBox-->
-										<CheckBox/>
-										<Input/>
+										<Input />
 									</cells>
 								</ColumnListItem>
 							</items>
 						</Table>
 					</IconTabFilter>
-					<!--IconTabFilter Ended for Roles/Responsibilities-->
-					<!--IconTabFilter Started for Salary Structure-->
+					<!-- Salary Structure -->
 					<IconTabFilter text="Salary Structure">
-						<Table items="{JobMaster>/JobMaster}" popinLayout="GridSmall" alternateRowColors="true">
+						<Table items="{JobMaster>/JobMaster}" popinLayout="Block" alternateRowColors="true" backgroundDesign="Translucent" mode="MultiSelect" inset="false">
 							<headerToolbar>
 								<Toolbar>
 									<content>
-										<!--Salary Structure-->
-										<Label text="Salary Structure" design="Bold"/>
-										<ToolbarSpacer/>
-										<!--Add Button-->
-										<Button icon="sap-icon://add" iconFirst="true" type="Ghost"/>
+										<Label text="Salary Structure" design="Bold" />
+										<ToolbarSpacer />
+										<Button icon="sap-icon://add" iconFirst="true" type="Ghost" />
 									</content>
 								</Toolbar>
 							</headerToolbar>
 							<columns>
-								<Column width="3%" demandPopin="true">
-									<CheckBox></CheckBox>
+								<Column width="12em">
+									<Text text="Product" />
 								</Column>
-								<!--Wage Type-->
-								<Column width="20%" hAlign="Center" demandPopin="true">
-									<Text text="Wage Type"/>
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text="Supplier" />
 								</Column>
-								<!--Amount Type-->
-								<Column width="20%" hAlign="Center" demandPopin="true">
-									<Text text="Amount Type"/>
+								<Column minScreenWidth="Desktop" demandPopin="true" hAlign="End">
+									<Text text="Dimensions" />
 								</Column>
-								<!--Percentage-->
-								<Column width="15%" hAlign="Center" demandPopin="true">
-									<Text text="Percentage(%)"/>
+								<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+									<Text text="Weight" />
 								</Column>
-								<!--Base Wage Type-->
-								<Column width="15%" hAlign="Center" demandPopin="true">
-									<Text text="Base Wage Type"/>
-								</Column>
-								<!--Amount-->
-								<Column width="15%" hAlign="Center" demandPopin="true">
-									<Text text="Amount"/>
+								<Column hAlign="End">
+									<Text text="Price" />
 								</Column>
 							</columns>
 							<items>
 								<ColumnListItem>
 									<cells>
-										<CheckBox></CheckBox>
-										<Select width="100%"/>
-										<Select width="100%"/>
-										<Text/>
-										<Select width="100%"/>
-										<Text/>
+
+										<Select width="100%" />
+										<Select width="100%" />
+										<Text />
+										<Select width="100%" />
+										<Text />
 									</cells>
 								</ColumnListItem>
 							</items>
 						</Table>
 					</IconTabFilter>
-					<!--IconTabFilter Ended for Salary Structure-->
 				</items>
 			</IconTabBar>
+			<!-- Ending IconTabBar -->
+			<!-- Starting FlexBox -->
 			<FlexBox justifyContent="Center" alignItems="Center" class="sapUiMediumMarginTop">
 				<items>
-					<!--Submit Button-->
-					<Button text="Submit" type="Ghost" press="onPress" tooltip="Submit" width="100%" icon="sap-icon://save" iconFirst="true"/>
+					<Button text="Submit" type="Ghost" tooltip="Submit" press="onPress" width="100%" icon="sap-icon://save" iconFirst="true" />
 				</items>
 			</FlexBox>
+			<!-- Endig FlexBox -->
 		</content>
 	</Page>
 </mvc:View>

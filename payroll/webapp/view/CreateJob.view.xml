@@ -8,7 +8,7 @@
 	<Page title="Create Job" navButtonPress="onPressNavBack" showNavButton="true" titleAlignment="Center">
 		<content>
 			<!-- Starting Simple Form -->
-			<f:SimpleForm class="sapUiLargeMarginBegin" editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+			<f:SimpleForm  editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="true" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false">
 				<!-- Job Name -->
 				<Label text="Job Name" required="true" />
 				<Input />
@@ -19,7 +19,7 @@
 				<items>
 					<!-- Roles or Responblities -->
 					<IconTabFilter text="Roles/Responsiblities">
-						<Table alternateRowColors="true">
+						<Table alternateRowColors="true" mode="MultiSelect" >
 							<headerToolbar>
 								<Toolbar>
 									<content>
@@ -30,15 +30,12 @@
 								</Toolbar>
 							</headerToolbar>
 							<columns>
-								<Column width="3%" demandPopin="true">
-								</Column>
-								<Column width="90%" demandPopin="true">
+								<Column width="90%" demandPopin="true" minScreenWidth="Tablet">
 								</Column>
 							</columns>
 							<items>
 								<ColumnListItem>
 									<cells>
-										<CheckBox />
 										<Input />
 									</cells>
 								</ColumnListItem>
