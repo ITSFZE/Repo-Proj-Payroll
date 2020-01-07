@@ -19,7 +19,7 @@
 				<items>
 					<!-- Roles or Responblities -->
 					<IconTabFilter text="Roles/Responsiblities">
-						<Table alternateRowColors="true" mode="MultiSelect">
+						<Table alternateRowColors="true" mode="MultiSelect" class="sapUiResponsiveMargin" width="auto">
 							<headerToolbar>
 								<Toolbar>
 									<content>
@@ -44,7 +44,7 @@
 					</IconTabFilter>
 					<!-- Salary Structure -->
 					<IconTabFilter text="Salary Structure">
-						<Table items="{path:'/salaryStructure', templateShareable:false}" popinLayout="Block" alternateRowColors="true" backgroundDesign="Translucent" mode="MultiSelect" inset="false">
+						<Table items="{path:'/salaryStructure', templateShareable:false}" popinLayout="Block" alternateRowColors="true" backgroundDesign="Translucent" mode="MultiSelect" inset="false" class="sapUiResponsiveMargin" width="auto">
 							<headerToolbar>
 								<Toolbar>
 									<content>

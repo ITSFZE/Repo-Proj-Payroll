@@ -7,7 +7,7 @@
 	<Page enableScrolling="true" title="Job Master" showNavButton="true" navButtonPress="onPressNavBack">
 		<content>
 			<VBox fitContainer="true">
-				<Table items="{/JobMaster}" popinLayout="GridLarge" alternateRowColors="true">
+				<Table items="{/JobMaster}" popinLayout="GridLarge" alternateRowColors="true" class="sapUiResponsiveMargin" width="auto">
 					<headerToolbar>
 						<OverflowToolbar>
 							<content>
