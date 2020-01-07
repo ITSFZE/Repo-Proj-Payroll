@@ -12,7 +12,7 @@
 						<OverflowToolbar>
 							<content>
 								<!--Job Master List-->
-								<Title text="Job Master List" titleStyle="Auto"/>
+								<Title/>
 								<ToolbarSpacer/>
 								<SearchField width="25%" class="sapUiSmallMarginEnd"/>
 								<Button text="Create Job" type="Ghost" class="sapUiMediumMarginEnd" press="onPressCreateJob" tooltip="Add Job"></Button>
@@ -20,27 +20,27 @@
 						</OverflowToolbar>
 					</headerToolbar>
 					<columns>
-						<!--Job Name-->
+						
 						<Column width="11em" hAlign="Begin">
-							<Text text="Job Name"/>
+							<Label text="Job Name" design="Bold"/>
 						</Column>
-						<!--Number of Positions-->
+						
 						<Column width="11em" hAlign="Center" demandPopin="true" minScreenWidth="Tablet">
-							<Text text="No. of Positions"/>
+							<Label text="No. of Positions" design="Bold"/>
 						</Column>
-						<!--Created Date-->
+						
 						<Column width="11em" hAlign="Center" demandPopin="true" minScreenWidth="Tablet">
-							<Text text="Created Date"/>
+							<Label text="Created Date" design="Bold"/>
 						</Column>
-						<!--Modified Date-->
+						
 						<Column width="11em" hAlign="Center" demandPopin="true" minScreenWidth="Tablet">
-							<Text text="Modified Date"/>
+							<Label text="Modified Date"  design="Bold" />
 						</Column>
-						<!--Edit Job Button-->
+						
 						<Column width="1.5em" hAlign="Begin"></Column>
-						<!--Manage Positions Button-->
+						
 						<Column width="1.5em" hAlign="Begin"></Column>
-						<!--Add Position Button-->
+						
 						<Column width="3em" hAlign="Begin"></Column>
 					</columns>
 					<items>

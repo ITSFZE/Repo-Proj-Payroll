@@ -48,27 +48,27 @@
 							<headerToolbar>
 								<Toolbar>
 									<content>
-										<Label text="Salary Structure" design="Bold" />
+										<Label/>
 										<ToolbarSpacer />
 										<Button icon="sap-icon://add" iconFirst="true" type="Ghost" />
 									</content>
 								</Toolbar>
 							</headerToolbar>
 							<columns>
-								<Column width="12em"  hAlign="Center" >
-									<Text text="Wage Type" />
+								<Column width="25em"  hAlign="Center" >
+									<Label text="Wage Type" design="Bold"/>
 								</Column>
 								<Column hAlign="Center" demandPopin="true" minScreenWidth="Tablet">
-									<Text text="AmountType" />
+									<Label text="AmountType" design="Bold"/>
 								</Column>
 								<Column demandPopin="true" hAlign="Center" minScreenWidth="Tablet">
-									<Text text="Percentage" />
+									<Label text="Percentage" design="Bold"/>
 								</Column>
 								<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
-									<Text text="Base Wage Type" />
+									<Label text="Base Wage Type" design="Bold"/>
 								</Column>
 								<Column hAlign="Center" demandPopin="true" minScreenWidth="Tablet">
-									<Text text="Amount" />
+									<Label text="Amount" design="Bold"/>
 								</Column>
 							</columns>
 							<items>
