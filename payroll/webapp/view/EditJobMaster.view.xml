@@ -1,14 +1,14 @@
-<!-- "Edit Job" view is used to Create Job details from JobMaster View -->
+<!-- CreateJob view is used to Create Job details from JobMaster View -->
 <mvc:View xmlns:core="sap.ui.core" 
 	xmlns:mvc="sap.ui.core.mvc" 
 	xmlns:f="sap.ui.layout.form" 
 	xmlns:l="sap.ui.layout" 
-	xmlns="sap.m" displayBlock="true" controllerName="com.app.payroll.controller.EditJobMaster" 
+	xmlns="sap.m" displayBlock="true" controllerName="com.app.payroll.controller.CreateJob" 
 	xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page title="Create Job" navButtonPress="onPressNavBack" showNavButton="true" titleAlignment="Center">
+	<Page title="Edit Job" navButtonPress="onPressNavBack" showNavButton="true" titleAlignment="Center">
 		<content>
 			<!-- Starting Simple Form -->
-			<f:SimpleForm  editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="true" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false">
+			<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="true" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false">
 				<!-- Job Name -->
 				<Label text="Job Name" required="true" />
 				<Input />
@@ -19,7 +19,7 @@
 				<items>
 					<!-- Roles or Responblities -->
 					<IconTabFilter text="Roles/Responsiblities">
-						<Table alternateRowColors="true" mode="MultiSelect" >
+						<Table alternateRowColors="true" mode="MultiSelect">
 							<headerToolbar>
 								<Toolbar>
 									<content>
@@ -44,7 +44,7 @@
 					</IconTabFilter>
 					<!-- Salary Structure -->
 					<IconTabFilter text="Salary Structure">
-						<Table items="{JobMaster>/JobMaster}" popinLayout="Block" alternateRowColors="true" backgroundDesign="Translucent" mode="MultiSelect" inset="false">
+						<Table items="{path:'/salaryStructure', templateShareable:false}" popinLayout="Block" alternateRowColors="true" backgroundDesign="Translucent" mode="MultiSelect" inset="false">
 							<headerToolbar>
 								<Toolbar>
 									<content>
@@ -55,31 +55,36 @@
 								</Toolbar>
 							</headerToolbar>
 							<columns>
-								<Column width="12em">
-									<Text text="Product" />
+								<Column width="12em"  hAlign="Center" >
+									<Text text="Wage Type" />
 								</Column>
-								<Column minScreenWidth="Tablet" demandPopin="true">
-									<Text text="Supplier" />
+								<Column hAlign="Center" demandPopin="true" minScreenWidth="Tablet">
+									<Text text="AmountType" />
 								</Column>
-								<Column minScreenWidth="Desktop" demandPopin="true" hAlign="End">
-									<Text text="Dimensions" />
+								<Column demandPopin="true" hAlign="Center" minScreenWidth="Tablet">
+									<Text text="Percentage" />
 								</Column>
-								<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
-									<Text text="Weight" />
+								<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+									<Text text="Base Wage Type" />
 								</Column>
-								<Column hAlign="End">
-									<Text text="Price" />
+								<Column hAlign="Center" demandPopin="true" minScreenWidth="Tablet">
+									<Text text="Amount" />
 								</Column>
 							</columns>
 							<items>
 								<ColumnListItem>
 									<cells>
-
-										<Select width="100%" />
-										<Select width="100%" />
-										<Text />
-										<Select width="100%" />
-										<Text />
+										<Select width="100%" items="{/salaryStructure}">
+											<core:Item key="{key}" text="{wageType}" />
+										</Select>
+										<Select width="100%" items="{/salaryStructure}">
+											<core:Item key="{key}" text="{amountType}" />
+										</Select>
+										<Input/>
+										<Select width="100%" items="{/salaryStructure}">
+											<core:Item key="{key}" text="{baseWageType}" />
+										</Select>
+										<Input />
 									</cells>
 								</ColumnListItem>
 							</items>

@@ -144,13 +144,27 @@
 			"mDate": "12/01/2019"
 		}
 	],
+	"salaryStructure": [
+		{
+			"wageType": "Basic",
+			"amountType": "Fixed",
+			"baseWageType": "Basic",
+			"key": 1
+		},
+		{
+			"wageType": "HRA",
+			"amountType": "Variable",
+			"baseWageType": "HRA",
+			"key": 2
+		}
+	],
 	"EmployeeGroup": [
 		{
 			"GroupName": "PMS",
 			"EmployeeCount": "34",
 			"GroupType": "PMS",
 			"GroupCode": "PMS1",
-			"CreatedDate":"31-Jul-2019",
+			"CreatedDate": "31-Jul-2019",
 			"Status": "Active"
 		},
 		{
@@ -158,7 +172,7 @@
 			"EmployeeCount": "2",
 			"GroupType": "Payroll",
 			"GroupCode": "Paye Disability",
-			"CreatedDate":"30-Jul-2019",
+			"CreatedDate": "30-Jul-2019",
 			"Status": "Inactive"
 		}
 	]
