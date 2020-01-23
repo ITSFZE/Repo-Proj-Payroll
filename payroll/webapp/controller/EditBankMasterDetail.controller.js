@@ -1,10 +1,10 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller",
+	"com/app/payroll/controller/BaseController",
 	"sap/ui/model/json/JSONModel"
-], function (Controller, JSONModel) {
+], function (BaseController, JSONModel) {
 	"use strict";
 
-	return Controller.extend("com.Payroll.controller.EditBankMasterDetail", {
+	return BaseController.extend("com.app.payroll.controller.EditBankMasterDetail", {
 
 		onInit: function () {
 			var that = this;

@@ -141,39 +141,42 @@ sap.ui.define([
 			var toolPage = sap.ui.getCore().byId(viewId + "--toolPage");
 			toolPage.setSideExpanded(false);
 			var item = oEvent.getParameter("item");
-				switch (item.getKey()) {
-					case 'JobMaster':
-						that.getRouter().navTo(item.getKey());
-						break;
-					case 'WageMaster':
-						that.getRouter().navTo(item.getKey());
-						break;
-					case 'EmployeeGroup':
-						that.getRouter().navTo(item.getKey());
-						break;
-					default:
-						this.getRouter().navTo(item.getKey());
-						break;
+			switch (item.getKey()) {
+				case 'JobMaster':
+					that.getRouter().navTo(item.getKey());
+					break;
+				case 'WageMaster':
+					that.getRouter().navTo(item.getKey());
+					break;
+				case 'EmployeeGroup':
+					that.getRouter().navTo(item.getKey());
+					break;
+				default:
+					this.getRouter().navTo(item.getKey());
+					break;
 
-				}
+			}
 		},
 		//TilePress Function is used to navigate the different pages wrt user choice
 		onTilePress: function (oEvt) {
 			var that = this;
 			var getPages = oEvt.getSource().data("route");
-				switch (getPages) {
-					case 'JobMaster':
-							that.getRouter().navTo(getPages);
-						break;
-					case 'EmployeeGroup':
-							that.getRouter().navTo(getPages);
-						break;
-					case 'WageMaster':
-							that.getRouter().navTo(getPages);
-						break;
-					default:
-							this.getRouter().navTo(getPages);
-				}
+			switch (getPages) {
+				case 'JobMaster':
+					that.getRouter().navTo(getPages);
+					break;
+				case 'EmployeeGroup':
+					that.getRouter().navTo(getPages);
+					break;
+				case 'WageMaster':
+					that.getRouter().navTo(getPages);
+					break;
+				case 'BankMaster':
+					that.getRouter().navTo(getPages);
+					break;
+				default:
+					this.getRouter().navTo(getPages);
+			}
 		}
 	});
 });

@@ -58,7 +58,7 @@
 								<l:BlockLayout id="dashBLayout">
 									<l:BlockLayoutRow>
 										<l:BlockLayoutCell title="Masters">
-                                            <!--Icon for JobMaster Tile-->
+											<!--Icon for JobMaster Tile-->
 											<GenericTile id="genericTileJobMaster" class="sapUiTinyMarginBegin sapUiTinyMarginTop" sizeBehavior="Small" header="Job Master" app:route="JobMaster" press="onTilePress">
 												<tileContent>
 													<TileContent>
@@ -85,6 +85,15 @@
 														<content>
 															<!--Icon for -->
 															<ImageContent src="sap-icon://group"/>
+														</content>
+													</TileContent>
+												</tileContent>
+											</GenericTile>
+											<GenericTile id="genericTileBankMaster" class="sapUiTinyMarginBegin sapUiTinyMarginTop" sizeBehavior="Small" press="onTilePress" header="Bank Master" app:route="BankMaster">
+												<tileContent>
+													<TileContent>
+														<content>
+		
 														</content>
 													</TileContent>
 												</tileContent>

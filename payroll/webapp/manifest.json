@@ -61,9 +61,11 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -75,51 +77,101 @@
 				"controlId": "idAppControl",
 				"clearControlAggregation": false
 			},
-			"routes": [{
-				"name": "Login",
-				"pattern": "",
-				"target": ["Login"]
-			}, {
-				"name": "Dashboard",
-				"pattern": "Dashboard",
-				"target": ["Dashboard"]
-			}, {
-				"name": "JobMaster",
-				"pattern": "JobMaster",
-				"target": ["JobMaster"]
-			}, {
-				"name": "EditJobMaster",
-				"pattern": "EditJobMaster",
-				"target": ["EditJobMaster"]
-			}, {
-				"name": "CreateJob",
-				"pattern": "CreateJob",
-				"target": ["CreateJob"]
-			}, {
-				"name": "EmployeeGroup",
-				"pattern": "EmployeeGroup",
-				"target": ["EmployeeGroup"]
-			}, {
-				"name": "UpdateEmployeeGroup",
-				"pattern": "UpdateEmployeeGroup",
-				"target": ["UpdateEmployeeGroup"]
-			}, {
-				"name": "CreateEmployeeGroup",
-				"pattern": "CreateEmployeeGroup",
-				"target": ["CreateEmployeeGroup"]
-			}, {
-				"name": "WageMaster",
-				"pattern": "WageMaster",
-				"target": ["WageMasterDetail", "WageMaster"]
-			}, {
-				"name": "WageMasterDetail",
-				"pattern": "WageMasterDetail",
-				"target": "WageMasterDetail"
-			}, {
-				"name": "EditWageMasterDetail",
-				"pattern": "EditWageMasterDetail/{id}",
-				"target": ["WageMasterDetail", "WageMaster"]
-			}],
+			"routes": [
+				{
+					"name": "Login",
+					"pattern": "",
+					"target": [
+						"Login"
+					]
+				},
+				{
+					"name": "Dashboard",
+					"pattern": "Dashboard",
+					"target": [
+						"Dashboard"
+					]
+				},
+				{
+					"name": "JobMaster",
+					"pattern": "JobMaster",
+					"target": [
+						"JobMaster"
+					]
+				},
+				{
+					"name": "EditJobMaster",
+					"pattern": "EditJobMaster",
+					"target": [
+						"EditJobMaster"
+					]
+				},
+				{
+					"name": "CreateJob",
+					"pattern": "CreateJob",
+					"target": [
+						"CreateJob"
+					]
+				},
+				{
+					"name": "EmployeeGroup",
+					"pattern": "EmployeeGroup",
+					"target": [
+						"EmployeeGroup"
+					]
+				},
+				{
+					"name": "UpdateEmployeeGroup",
+					"pattern": "UpdateEmployeeGroup",
+					"target": [
+						"UpdateEmployeeGroup"
+					]
+				},
+				{
+					"name": "CreateEmployeeGroup",
+					"pattern": "CreateEmployeeGroup",
+					"target": [
+						"CreateEmployeeGroup"
+					]
+				},
+				{
+					"name": "WageMaster",
+					"pattern": "WageMaster",
+					"target": [
+						"WageMasterDetail",
+						"WageMaster"
+					]
+				},
+				{
+					"name": "WageMasterDetail",
+					"pattern": "WageMasterDetail",
+					"target": "WageMasterDetail"
+				},
+				{
+					"name": "EditWageMasterDetail",
+					"pattern": "EditWageMasterDetail/{id}",
+					"target": [
+						"WageMasterDetail",
+						"WageMaster"
+					]
+				},
+				{
+					"name": "BankMaster",
+					"pattern": "BankMaster",
+					"target": [
+						"BankMasterDetail",
+						"BankMasterView"
+					]
+				},
+				{
+					"name": "EditBankMaster",
+					"pattern": "EditBankMaster/{Code}",
+					"target": [
+						"EditBankMasterDetail",
+						"BankMasterView"
+					]
+				}
+			],
 			"targets": {
 				"SplitContainerMasterAndDetail": {
 					"viewName": "SplitContainerMasterAndDetail"
@@ -197,6 +249,27 @@
 					"controlId": "SplitContainer",
 					"controlAggregation": "detailPages",
 					"viewLevel": 11
+				},
+				"BankMasterView": {
+					"viewName": "BankMasterView",
+					"parent": "SplitContainerMasterAndDetail",
+					"controlId": "SplitContainer",
+					"controlAggregation": "masterPages",
+					"viewLevel": 12
+				},
+				"BankMasterDetail": {
+					"viewName": "BankMasterDetail",
+					"parent": "SplitContainerMasterAndDetail",
+					"controlId": "SplitContainer",
+					"controlAggregation": "detailPages",
+					"viewLevel": 13
+				},
+				"EditBankMasterDetail": {
+					"viewName": "EditBankMasterDetail",
+					"parent": "SplitContainerMasterAndDetail",
+					"controlId": "SplitContainer",
+					"controlAggregation": "detailPages",
+					"viewLevel": 14
 				}
 			}
 		}

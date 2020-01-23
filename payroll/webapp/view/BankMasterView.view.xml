@@ -1,4 +1,6 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.Payroll.controller.BankMasterView"
+<mvc:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" controllerName="com.app.payroll.controller.BankMasterView" 
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="Bank Master" showNavButton="true" navButtonPress="onNavBackPress">
 		<List items="{path:'BankModel>/BankMaster'}">

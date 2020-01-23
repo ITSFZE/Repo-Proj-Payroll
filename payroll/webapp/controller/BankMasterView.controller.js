@@ -1,10 +1,10 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller",
+	"com/app/payroll/controller/BaseController",
 	"sap/m/MessageToast"
-], function (Controller, MessageToast) {
+], function (BaseController, MessageToast) {
 	"use strict";
 
-	return Controller.extend("com.Payroll.controller.BankMasterView", {
+	return BaseController.extend("com.app.payroll.controller.BankMasterView", {
 
 		onInit: function () {
 			var that = this;

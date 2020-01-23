@@ -1,20 +1,22 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
-	controllerName="com.Payroll.controller.EditBankMasterDetail" xmlns:html="http://www.w3.org/1999/xhtml">
+<mvc:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	xmlns:f="sap.ui.layout.form" controllerName="com.app.payroll.controller.EditBankMasterDetail" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="Edit Bank Details">
 		<content>
-			<f:SimpleForm class="sapUiLargeMarginTop sapUiLargeMarginBottom" editable="true" layout="ResponsiveGridLayout"
-				labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4"
-				emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="true">
+			<f:SimpleForm class="sapUiLargeMarginTop sapUiLargeMarginBottom" editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="true">
 				<f:content>
-					<Label text="Bank Code"/><Input id="iBCode" value="{EditBankModel>/code}"/>
-					<Label text="Bank Name"/><Input id="iBName" value="{EditBankModel>/name}"/>
+					<Label text="Bank Code"/>
+					<Input id="iBCode" value="{EditBankModel>/code}"/>
+					<Label text="Bank Name"/>
+					<Input id="iBName" value="{EditBankModel>/name}"/>
 					<Label text="Status"/>
 					<Select items="{path:'/Status'}" id="iStatus" forceSelection="true" valueState="{/state}" change="onChangeValueState">
 						<core:Item key="{key}" text="{EditBankModel>/status}"/>
 					</Select>
 					<Label text="Choose Company"/>
-					<MultiComboBox id="iCName" selectionChange="handleSelectionChange" items="{ path: '/CCompany'}"
-						placeholder="Please Select The Branch">
+					<MultiComboBox id="iCName" selectionChange="handleSelectionChange" items="{ path: '/CCompany'}" placeholder="Please Select The Branch">
 						<core:Item key="{key}" text="{EditBankModel>/companyName}"/>
 					</MultiComboBox>
 					<!--	<Select items="{path:'/CCompany'}">

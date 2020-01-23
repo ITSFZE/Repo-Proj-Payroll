@@ -1,60 +1,60 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.Payroll.controller.BankMasterDetail"
-	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form">
+<mvc:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" controllerName="com.app.payroll.controller.BankMasterDetail" 
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	xmlns:f="sap.ui.layout.form">
 
-			<Page title="Create Bank Details">
-				<content>
-					<f:SimpleForm class="sapUiLargeMarginTop sapUiLargeMarginBottom" editable="true" layout="ResponsiveGridLayout"
-				labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4"
-				emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="true">
-						<f:content>
-							<Label text="Bank Code"/><Input id="iBCode"/>
-							<Label text="Bank Name"/><Input id="iBName"/>
-							<Label text="Status"/>
-							<Select items="{path:'/Status'}" id="iStatus" forceSelection="true" valueState="{/state}" change="onChangeValueState">
-								<core:Item key="{key}" text="{status}"/>
-							</Select>
-							<Label text="Choose Company"/>
-							<MultiComboBox id = "iCName" selectionChange="handleSelectionChange" items="{ path: '/CCompany', sorter: { path: 'Name' } }" placeholder="Please Select The Branch">
-								<core:Item key="{key}" text="{cName}"/>
-							</MultiComboBox>
-							<!--	<Select items="{path:'/CCompany'}">
-								<core:Item key="{key}" text="{cName}"></core:Item>
-							</Select>-->
-							<Label></Label>
-							<Button text="Submit" press="onPressSubmitBankDetails"></Button>
-						</f:content>
-					</f:SimpleForm>
-					<Bar>
-						<contentRight>
-							<Button icon="sap-icon://add" type="Emphasized" press="onPressAddRow"></Button>
-							<Button icon="sap-icon://negative" type="Emphasized" press="onPressRemoveRow"></Button>
-						</contentRight>
-					</Bar>
-					<Table mode="MultiSelect" id="iBDTable">
-						<columns id="parentColums">
-							<Column id="c1">
-								<Text text="Bank Name"/>
-							</Column>
-							<Column  id="c2">
-								<Text text="IFSC Code"/>
-							</Column>
-							<Column  id="c3">
-								<Text text="Branch Address"/>
-							</Column>
-							<Column  id="c4">
-								<Text text="Other Details"/>
-							</Column>
-						</columns>
-						<ColumnListItem id="parentColumListItem">
-							<cells id="parentCells">
-								<Input id="bN"  placeholder="Enter The Bank Name"/>
-								<Input id="Ifsc" placeholder="Enter The IFSC Code"/>
-								<TextArea id="address" placeholder="Enter The Address" growing="true" growingMaxLines="7" width="100%"/>
-								<Input id="OD" placeholder="Enter The Other Details"/>
-							</cells>
-						</ColumnListItem>
-					</Table>
-				</content>
-			</Page>
-		
+	<Page title="Create Bank Details">
+		<content>
+			<f:SimpleForm class="sapUiLargeMarginTop sapUiLargeMarginBottom" editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="true">
+				<f:content>
+					<Label text="Bank Code"/>
+					<Input id="iBCode"/>
+					<Label text="Bank Name"/>
+					<Input id="iBName"/>
+					<Label text="Status"/>
+					<Select items="{path:'/Status'}" id="iStatus" forceSelection="true" valueState="{/state}" change="onChangeValueState">
+						<core:Item key="{key}" text="{status}"/>
+					</Select>
+					<Label text="Choose Company"/>
+					<MultiComboBox id = "iCName" selectionChange="handleSelectionChange" items="{ path: '/CCompany', sorter: { path: 'Name' } }" placeholder="Please Select The Branch">
+						<core:Item key="{key}" text="{cName}"/>
+					</MultiComboBox>
+					<Label></Label>
+					<Button text="Submit" press="onPressSubmitBankDetails"></Button>
+				</f:content>
+			</f:SimpleForm>
+			<Bar>
+				<contentRight>
+					<Button icon="sap-icon://add" type="Emphasized" press="onPressAddRow"></Button>
+					<Button icon="sap-icon://negative" type="Emphasized" press="onPressRemoveRow"></Button>
+				</contentRight>
+			</Bar>
+			<Table mode="MultiSelect" id="iBDTable">
+				<columns id="parentColums">
+					<Column id="c1">
+						<Text text="Bank Name"/>
+					</Column>
+					<Column id="c2">
+						<Text text="IFSC Code"/>
+					</Column>
+					<Column id="c3">
+						<Text text="Branch Address"/>
+					</Column>
+					<Column id="c4">
+						<Text text="Other Details"/>
+					</Column>
+				</columns>
+				<ColumnListItem id="parentColumListItem">
+					<cells id="parentCells">
+						<Input id="bN" placeholder="Enter The Bank Name"/>
+						<Input id="Ifsc" placeholder="Enter The IFSC Code"/>
+						<TextArea id="address" placeholder="Enter The Address" growing="true" growingMaxLines="7" width="100%"/>
+						<Input id="OD" placeholder="Enter The Other Details"/>
+					</cells>
+				</ColumnListItem>
+			</Table>
+		</content>
+	</Page>
+
 </mvc:View>
