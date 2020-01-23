@@ -1,0 +1,16 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.Payroll.controller.BankMasterView"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Bank Master" showNavButton="true" navButtonPress="onNavBackPress">
+		<List items="{path:'BankModel>/BankMaster'}">
+			<items>
+				<ObjectListItem title="{BankModel>name}" intro="{BankModel>code}" number="{BankModel>ncompany}" type="Active" press="onListItemPress">
+					<firstStatus>
+						<ObjectStatus text="{BankModel>status}" state="Success"/>
+					</firstStatus>
+					<ObjectAttribute/>
+					<ObjectAttribute text="{BankModel>companyName}"/>
+				</ObjectListItem>
+			</items>
+		</List>
+	</Page>
+</mvc:View>
