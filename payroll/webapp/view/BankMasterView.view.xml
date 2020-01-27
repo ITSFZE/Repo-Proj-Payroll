@@ -3,14 +3,14 @@
 	xmlns="sap.m" controllerName="com.app.payroll.controller.BankMasterView" 
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="Bank Master" showNavButton="true" navButtonPress="onNavBackPress">
-		<List items="{path:'BankModel>/BankMaster'}">
+		<List items="{path:'HouseBankAccounts'}">
 			<items>
-				<ObjectListItem title="{BankModel>name}" intro="{BankModel>code}" number="{BankModel>ncompany}" type="Active" press="onListItemPress">
+				<ObjectListItem title="{HouseBankAccounts>BankCode}" intro="{HouseBankAccounts>Branch}" number="{HouseBankAccounts>ISRType}" type="Active" press="onListItemPress">
 					<firstStatus>
-						<ObjectStatus text="{BankModel>status}" state="Success"/>
+						<ObjectStatus text="{HouseBankAccounts>State}" state="Success"/>
 					</firstStatus>
 					<ObjectAttribute/>
-					<ObjectAttribute text="{BankModel>companyName}"/>
+					<ObjectAttribute text="{HouseBankAccounts>Country}"/>
 				</ObjectListItem>
 			</items>
 		</List>
