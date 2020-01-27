@@ -8,16 +8,33 @@ sap.ui.define([
 			getAccountList: function (filter) {
 				var deferred = $.Deferred();
 				var jModel = new JSONModel();
-				var url = "http://192.168.30.118:8082/api/HouseBankAccounts" + "?$filter=" + filter;
+				var url = "http://192.168.30.108:8082/api/HouseBankAccounts" + "?$filter=" + filter;
 				$.ajax({
 					type: 'GET',
 					url: url,
-					success: function(response) {
+					success: function (response) {
 						jModel.setData(response);
 						jModel.setSizeLimit(response.value.length);
 						deferred.resolve(jModel);
 					},
-					error: function(xhr) {
+					error: function (xhr) {
+						deferred.reject(xhr.responseJSON.body.Message);
+					}
+				});
+				return deferred.promise();
+			},
+			getAccountByAccNo: function (jMdl, AccNo) {
+				var deferred = $.Deferred();
+				var jModel = new JSONModel();
+				var url = "http://192.168.30.108:8082/api/HouseBankAccounts" + "(" + AccNo + ")" + "?$filter=";
+				$.ajax({
+					type: 'GET',
+					url: url,
+					success: function (response) {
+						jMdl.setData(response);
+						deferred.resolve(jModel);
+					},
+					error: function (xhr) {
 						deferred.reject(xhr.responseJSON.body.Message);
 					}
 				});

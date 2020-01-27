@@ -154,6 +154,9 @@ sap.ui.define([
 				case 'EmployeeGroup':
 					that.getRouter().navTo(item.getKey());
 					break;
+				case 'BankMaster':
+					that.getRouter().navTo(item.getKey());
+					break;
 				default:
 					this.getRouter().navTo(item.getKey());
 					break;

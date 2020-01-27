@@ -164,11 +164,11 @@
 					]
 				},
 				{
-					"name": "EditBankMaster",
-					"pattern": "EditBankMaster/{Code}",
+					"name": "EditBankMasterDetail",
+					"pattern": "EditBankMasterDetail/{AccNo}",
 					"target": [
-						"EditBankMasterDetail",
-						"BankMasterView"
+						"BankMasterView",
+						"EditBankMasterDetail"
 					]
 				}
 			],

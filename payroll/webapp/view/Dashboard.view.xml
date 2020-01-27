@@ -93,7 +93,7 @@
 												<tileContent>
 													<TileContent>
 														<content>
-		
+															<ImageContent src="sap-icon://loan"/>
 														</content>
 													</TileContent>
 												</tileContent>

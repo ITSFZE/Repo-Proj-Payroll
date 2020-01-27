@@ -28,6 +28,12 @@
 					"icon": "sap-icon://group",
 					"expanded": false,
 					"key": "EmployeeGroup"
+				},
+				{
+					"title": "Bank Master",
+					"icon": "sap-icon://loan",
+					"expanded": false,
+					"key": "BankMaster"
 				}
 			]
 		}

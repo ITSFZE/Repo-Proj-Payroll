@@ -11,9 +11,9 @@ sap.ui.define([
 		onInit: function () {
 			//var that = this;
 			//var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			var oRouter = this.getRouter();
-			oRouter.getRoute("BankMaster").attachMatched(this._onRouteMatched(), this);
-			oRouter.getRoute("EditBankMaster").attachMatched(this._onEditRouteMatched(), this);
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.getRoute("BankMaster").attachMatched(this._onRouteMatched, this);
+			//oRouter.getRoute("EditBankMaster").attachMatched(this._onEditRouteMatched(), this);
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 			var newMdl = new JSONModel();
 			this.getView().setModel(newMdl, "BankModel");
@@ -24,7 +24,7 @@ sap.ui.define([
 			this.fetchBanksList(filter);
 		},
 		_onEditRouteMatched: function(){
-			var that = this;
+			alert("test");
 		},
 		fetchBanksList: function (filter) {
 			var that = this;
@@ -38,15 +38,15 @@ sap.ui.define([
 				that.getView().setBusy(false);
 				that.fetchErrorMessageOk("Error", "Error", err.toString());
 			});
-		},/* ,
+		},
 		onListItemPress: function (oEvent) {
-			MessageToast.show("Pressed : " + oEvent.getSource().getTitle());
-			var code = oEvent.getSource().getBindingContext("BankModel").getProperty("code");
+			//MessageToast.show("Pressed : " + oEvent.getSource().getTitle());
+			var accno = oEvent.getSource().getBindingContext("BankModel").getProperty("AccNo");
 			this.getOwnerComponent().getRouter()
-				.navTo("EditBankMaster", {
-					Code: code
+				.navTo("EditBankMasterDetail",{
+					AccNo: accno
 				});
-		} */
+		},
 		onNavBackPress: function () {
 			this.getOwnerComponent().getRouter().navTo("Dashboard");
 		}

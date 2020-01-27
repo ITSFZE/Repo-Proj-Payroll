@@ -1,47 +1,20 @@
 sap.ui.define([
-	"com/app/payroll/controller/BaseController",
+	"com/app/payroll/controller/sal/BankMasterSAL",
 	"sap/ui/model/json/JSONModel"
-], function (BaseController, JSONModel) {
+], function (BankMasterSAL, JSONModel) {
 	"use strict";
 
-	return BaseController.extend("com.app.payroll.controller.EditBankMasterDetail", {
+	return BankMasterSAL.extend("com.app.payroll.controller.EditBankMasterDetail", {
 
 		onInit: function () {
 			var that = this;
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.getRoute("EditBankMaster").attachMatched(that._onRouteMatched, that);
-			oRouter.getRoute("BankMaster").attachMatched(that._onRouteMatched, that);
-			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
-			//New Model
-			/*var setMdl = new JSONModel();
-			this.getView().setModel(setMdl, "BankModel");*/
-
-			var oData = {
-				"Status": [{
-					"status": "Active",
-					"key": 1,
-					"state": "Success"
-				}, {
-					"status": "Inactive",
-					"key": 2,
-					"state": "Error"
-				}],
-				"CCompany": [{
-					"cName": "Enspire India",
-					"key": 1
-				}, {
-					"cName": "Enspire Kenya",
-					"key": 2
-				}, {
-					"cName": "Enspire UAE",
-					"key": 3
-				}]
-			};
-			var oModel = new JSONModel(oData);
-			this.getView().setModel(oModel);
+			oRouter.getRoute("EditBankMasterDetail").attachMatched(this._onRouteMatched, this);
+			//this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
+		
 		},
 		_onRouteMatched: function (oEvent) {
-			var BankMaster = [];
+			/* var BankMaster = [];
 			var nMdl = new JSONModel();
 			var getCode = oEvent.getParameter("arguments").Code;
 			var getMdl = this.getView().getModel("BankModel");
@@ -54,7 +27,21 @@ sap.ui.define([
 			var bankModel = new JSONModel(BankMaster);
 			var rData = bankModel.getData()[0];
 			nMdl.setData(rData);
-			this.getView().setModel(nMdl, "EditBankModel");
+			this.getView().setModel(nMdl, "EditBankModel"); */
+			var that = this;
+			that.showLoading(true);
+			var code = oEvent.getParameter("arguments").AccNo;
+			var bankModel = new JSONModel();
+			this.getAccountByAccNo(bankModel, code).done(function (jMdl) {
+				that.getView().setModel(jMdl, "EditBankModel");
+				that.showLoading(false);
+			}).fail(function (err) {
+				that.showLoading(false);
+				that.fetchErrorMessageOk("Error", "Error", err.toString());
+			});
+			var ret = 0;
+			/* var getSportsEditId = that.getVariables();
+			getSportsEditId.eSportName.setValueState("None"); */
 		},
 		onPressCloseEditSports: function () {
 			this.getOwnerComponent().getRouter().navTo("BankMaster");
