@@ -170,6 +170,23 @@
 						"BankMasterView",
 						"EditBankMasterDetail"
 					]
+				},
+				{
+					"name": "PayrollAreaMaster",
+					"pattern": "PayrollAreaMaster",
+					"target": [
+						"PayrollAreaDetail",
+						"PayrollAreaMaster"
+						
+					]
+				},
+				{
+					"name": "EditPayrollArea",
+					"pattern": "EditPayrollArea/{sPath}",
+					"target": [
+						"PayrollAreaMaster",
+						"PayrollAreaDetail"
+					]
 				}
 			],
 			"targets": {
@@ -270,6 +287,20 @@
 					"controlId": "SplitContainer",
 					"controlAggregation": "detailPages",
 					"viewLevel": 14
+				},
+				"PayrollAreaMaster": {
+					"viewName": "PayrollAreaMaster",
+					"parent": "SplitContainerMasterAndDetail",
+					"controlId": "SplitContainer",
+					"controlAggregation": "masterPages",
+					"viewLevel": 15
+				},
+				"PayrollAreaDetail": {
+					"viewName": "PayrollAreaDetail",
+					"parent": "SplitContainerMasterAndDetail",
+					"controlId": "SplitContainer",
+					"controlAggregation": "detailPages",
+					"viewLevel": 16
 				}
 			}
 		}

@@ -176,7 +176,11 @@ sap.ui.define([
 					break;
 				case 'BankMaster':
 					that.getRouter().navTo(getPages);
+					break; 
+				case 'PayrollAreaMaster':
+					that.getRouter().navTo(getPages);
 					break;
+
 				default:
 					this.getRouter().navTo(getPages);
 			}

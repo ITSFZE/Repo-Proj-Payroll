@@ -29,6 +29,10 @@ sap.ui.define([
 			this.getView().setModel(ddModel,"EditWageMasterDetail");
 		
 			
+		},
+		onPressEditWage: function (){
+			var getWageFormId = this.getView().byId("iWageForm");
+			getWageFormId.setEditable(true);
 		}
 	});
 

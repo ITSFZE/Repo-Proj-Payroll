@@ -47,6 +47,7 @@ sap.ui.define([
 			this.getOwnerComponent().getRouter().navTo("BankMaster");
 		},
 		onPressAddRow: function (oEvent) {
+			
 
 			var oItem = new sap.m.ColumnListItem({
 				cells: [new sap.m.Input({

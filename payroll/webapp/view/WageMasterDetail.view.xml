@@ -13,13 +13,13 @@
 						<Title text=""/>
 						<ToolbarSpacer/>
 						<!--Edit Button-->
-						<Button icon="sap-icon://edit" type="Ghost" tooltip="Edit"/>
+						<Button icon="sap-icon://edit" type="Ghost" tooltip="Edit" press="onPressEditWage"/>
 					</OverflowToolbar>
 				</headerToolbar>
 				<content>
 					<VBox class="sapUiSmallMargin">
 						<!--Starting SimpleForm-->
-						<f:SimpleForm editable="false" layout="ResponsiveGridLayout" title="" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="true" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false">
+						<f:SimpleForm id="iWageForm" editable="true" layout="ResponsiveGridLayout" title="" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="true" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false">
 							<f:content>
 								<Label text="Wage Type Name"/>
 								<Text text="{EditWageMasterDetail>/wageType}"/>

@@ -1,0 +1,16 @@
+<mvc:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" controllerName="com.app.payroll.controller.PayrollAreaMaster" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Payroll Area Master" showNavButton="true" navButtonPress="onNavBackPress">
+		<List items="{/PayrollAreaList}">
+			<items>
+				<ObjectListItem title="{pArea}" intro="{pParameter}" number="{description}" type="Active" press="onPressListItem">
+					<firstStatus>
+						<ObjectStatus text="{status}" state="Success"/>
+					</firstStatus>
+				</ObjectListItem>
+			</items>
+		</List>
+	</Page>
+</mvc:View>
