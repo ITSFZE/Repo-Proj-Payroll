@@ -19,8 +19,8 @@ sap.ui.define([
         onPressListItem: function(oEvent) {
 			var that = this;
 			var oItem, oCtx;
-			//oItem = oEvent.getSource();
-			oCtx = oEvent.getSource().getBindingContext().getModel("PayrollAreaList").getData().PayrollAreaList[0]
+			oItem = oEvent.getSource();
+			oCtx = oItem.getBindingContext(undefined).getObject()
 			that.getOwnerComponent().getRouter().navTo("EditPayrollArea", {
 				pArea: oCtx.pArea
             });
